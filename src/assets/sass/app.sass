@@ -1,0 +1,631 @@
+//utils
+@import 'utils/libs.sass'
+@import 'utils/font.sass'
+
+//components
+@import 'components/constant.sass'
+@import 'components/forms.sass'
+@import 'components/buttons.sass'
+@import 'components/sliders-elements.sass'
+
+.container
+  width: 1400px
+  max-width: 100%
+  margin: 0 auto
+
+body
+  font-size: 16px
+  color: $black
+  font-family: $light, serif
+  background-color: #FAFAFA
+  line-height: 1
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+p
+  margin: 0
+img
+  max-width: 100%
+a
+  color: inherit
+
+  &:hover
+    color: inherit
+    text-decoration: none
+
+.bg-white
+  background-color: #fff
+
+.hide-svg
+  display: none
+
+.title
+  font-size: 40px
+  font-family: $bold, serif
+  background-image: url("data:image/svg+xml,%3Csvg width='1657' height='44' viewBox='0 0 1657 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H1657M0 22H1657M0 42H1657' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+  background-color: #FAFAFA
+  background-size: cover
+  width: 100%
+  position: relative
+  z-index: 10
+  height: 45px
+  width: 1400px
+  max-width: 100%
+  margin: 0 auto
+  &_white-bg
+    background-color: #fff
+  &__wrapper
+    position: relative
+    margin-bottom: 35px
+    &:after, &:before
+      content: ''
+      display: block
+      height: 45px
+      position: absolute
+      top: 0
+    &:after
+      left: 0
+      background-image: url("data:image/svg+xml,%3Csvg width='1657' height='44' viewBox='0 0 1657 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H1657M0 22H1657M0 42H1657' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+      width: 50%
+    &:before
+      right: 0
+      background-color: transparent
+      z-index: 1
+      width: 50%
+//Header
+
+  //logo
+.logo
+  background-size: cover
+  text-align: center
+  &_blue
+    background-color: $blue
+    background-image: url("data:image/svg+xml,%3Csvg width='216' height='44' viewBox='0 0 216 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M0 2H216' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath d='M0 22H216' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath d='M0 42H216' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/g%3E%3C/svg%3E%0A")
+    svg
+      fill: #fff
+  &_white
+    background-image: url("data:image/svg+xml,%3Csvg width='216' height='44' viewBox='0 0 216 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M0 2H216' stroke='%230A4A83' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath d='M0 22H216' stroke='%230A4A83' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath d='M0 42H216' stroke='%230A4A83' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/g%3E%3C/svg%3E%0A")
+    background-color: #fff
+    svg
+      fill: $blue
+// Top nav
+.top-nav
+  &__link
+    font-size: 20px
+    transition: $trans
+    font-family: $regular
+    &:hover
+      color: $red
+// Top contacts
+.top-contacts
+  justify-content: flex-end
+  align-items: center
+  position: relative
+  &__email
+    font-size: 18px
+    font-family: $regular, serif
+    margin-right: 25px
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.6364 1.14688C1.33764 1.14688 1.09095 1.39815 1.09095 1.70243V8.3691C1.09095 8.67339 1.33764 8.92466 1.6364 8.92466H10.3636C10.6624 8.92466 10.9091 8.67339 10.9091 8.3691V1.70243C10.9091 1.39815 10.6624 1.14688 10.3636 1.14688H1.6364ZM4.46267e-05 1.70243C4.46267e-05 0.784497 0.735156 0.0357666 1.6364 0.0357666H10.3636C11.2648 0.0357666 12 0.784497 12 1.70243V8.3691C12 9.28704 11.2648 10.0358 10.3636 10.0358H1.6364C0.735156 10.0358 4.46267e-05 9.28704 4.46267e-05 8.3691V1.70243Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.0986462 1.38383C0.271398 1.13247 0.611506 1.07136 0.858295 1.24731L6 4.91319L11.1417 1.24731C11.3885 1.07136 11.7286 1.13247 11.9014 1.38383C12.0741 1.63519 12.0141 1.9816 11.7673 2.15755L6.3128 6.04644C6.12499 6.18034 5.87502 6.18034 5.68721 6.04644L0.232703 2.15755C-0.0140853 1.9816 -0.0741058 1.63519 0.0986462 1.38383Z' fill='black'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 3px
+    padding-left: 22px
+  &__hide
+    opacity: 0
+    position: absolute
+    top: -155px
+    right: 0
+    border: 1px solid #D7D7D7
+    box-sizing: border-box
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1)
+    background: #fff
+    width: 265px
+    max-width: 100%
+    padding: 20px 15px 20px 30px
+    transition: .5s all ease-in-out
+    z-index: -10
+    &.is-visible
+      opacity: 1
+      top: 0
+      transition: .5s all ease-in-out
+      z-index: 10
+  &__hide-item
+      margin-bottom: 25px
+  &__phone-wrapper
+    cursor: pointer
+  &__phone
+    font-family: $bold, serif
+    font-size: 22px
+    display: block
+    height: 100%
+    &_hover
+      background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2L7.5 7.5L13 2' stroke='%23D3122B' stroke-width='3'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-position: 100% 50%
+      padding-right: 54px
+    &:hover
+      color: $red
+  &__line
+    height: 1px
+    width: 100%
+    background-color: #afafaf
+    margin: 15px 0
+  &__adress
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='16' viewBox='0 0 13 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.5 1.33334C5.12087 1.33334 3.79824 1.89525 2.82305 2.89545C1.84786 3.89565 1.3 5.25222 1.3 6.66672C1.3 8.73211 2.61023 10.7363 4.04687 12.2916C4.7519 13.0549 5.45913 13.6798 5.99084 14.114C6.18872 14.2756 6.36157 14.4103 6.5 14.5152C6.63843 14.4103 6.81128 14.2756 7.00916 14.114C7.54087 13.6798 8.2481 13.0549 8.95313 12.2916C10.3898 10.7363 11.7 8.73211 11.7 6.66672C11.7 5.25222 11.1521 3.89565 10.177 2.89545C9.20177 1.89525 7.87913 1.33334 6.5 1.33334ZM6.5 15.3335C6.13944 15.8882 6.1391 15.8879 6.1391 15.8879L6.13724 15.8866L6.13291 15.8837L6.11801 15.8733C6.10535 15.8645 6.0873 15.8519 6.06421 15.8355C6.01805 15.8027 5.95171 15.7549 5.86807 15.6929C5.70086 15.5691 5.46414 15.3883 5.18104 15.1571C4.61587 14.6955 3.8606 14.0287 3.10313 13.2086C1.61477 11.5973 0 9.26804 0 6.66672C3.8743e-08 4.8986 0.684824 3.20291 1.90381 1.95265C3.1228 0.7024 4.77609 0 6.5 0C8.22391 0 9.87721 0.7024 11.0962 1.95265C12.3152 3.20291 13 4.8986 13 6.66672C13 9.26804 11.3852 11.5973 9.89687 13.2086C9.1394 14.0287 8.38413 14.6955 7.81896 15.1571C7.53586 15.3883 7.29915 15.5691 7.13194 15.6929C7.0483 15.7549 6.98195 15.8027 6.93579 15.8355C6.9127 15.8519 6.89466 15.8645 6.882 15.8733L6.8671 15.8837L6.86277 15.8866L6.86139 15.8876C6.86139 15.8876 6.86055 15.8882 6.5 15.3335ZM6.5 15.3335L6.86056 15.8882C6.64222 16.0374 6.35743 16.0372 6.1391 15.8879L6.5 15.3335Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.5 5.33338C5.78203 5.33338 5.2 5.93034 5.2 6.66672C5.2 7.40311 5.78203 8.00007 6.5 8.00007C7.21797 8.00007 7.8 7.40311 7.8 6.66672C7.8 5.93034 7.21797 5.33338 6.5 5.33338ZM3.9 6.66672C3.9 5.19395 5.06406 4.00003 6.5 4.00003C7.93594 4.00003 9.1 5.19395 9.1 6.66672C9.1 8.13949 7.93594 9.33341 6.5 9.33341C5.06406 9.33341 3.9 8.13949 3.9 6.66672Z' fill='black'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    padding-left: 20px
+    font-size: 16px
+    line-height: 19px
+    font-family: $regular
+  &__timework
+    background-image: url("data:image/svg+xml,%3Csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.5 1.18182C3.56285 1.18182 1.18182 3.56285 1.18182 6.5C1.18182 9.43715 3.56285 11.8182 6.5 11.8182C9.43715 11.8182 11.8182 9.43715 11.8182 6.5C11.8182 3.56285 9.43715 1.18182 6.5 1.18182ZM0 6.5C0 2.91015 2.91015 0 6.5 0C10.0899 0 13 2.91015 13 6.5C13 10.0899 10.0899 13 6.5 13C2.91015 13 0 10.0899 0 6.5Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.5 2.36364C6.82635 2.36364 7.09091 2.6282 7.09091 2.95455V6.13479L9.1279 7.15329C9.4198 7.29924 9.53811 7.65419 9.39216 7.94608C9.24622 8.23798 8.89127 8.35629 8.59937 8.21034L6.23574 7.02852C6.03555 6.92843 5.90909 6.72382 5.90909 6.5V2.95455C5.90909 2.6282 6.17365 2.36364 6.5 2.36364Z' fill='black'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: 0 0
+    padding-left: 20px
+    font-size: 16px
+    line-height: 19px
+    font-family: $regular
+  &__btn
+    margin: 20px 0
+    width: 100%
+
+.header
+  padding: 30px 0 20px
+  &__btn
+    background: $red
+    color: #fff
+    text-transform: uppercase
+    font-family: $bold, serif
+    font-size: 14px
+    letter-spacing: 0.05em
+    text-align: center
+    padding: 18px 0
+    display: block
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    border-radius: 3px
+    transition: $trans
+    &:hover
+      background-color: $blue
+      color: #fff
+  &__form
+    position: relative
+  &__input
+    width: 100%
+  &__submit
+    position: absolute
+    width: 20px
+    height: 20px
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 2C5.13401 2 2 5.13401 2 9C2 12.866 5.13401 16 9 16C12.866 16 16 12.866 16 9C16 5.13401 12.866 2 9 2ZM0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.9429 13.9429C14.3334 13.5523 14.9666 13.5523 15.3571 13.9429L19.7071 18.2928C20.0976 18.6834 20.0976 19.3166 19.7071 19.7072C19.3166 20.0977 18.6834 20.0977 18.2929 19.7072L13.9429 15.3571C13.5524 14.9665 13.5524 14.3334 13.9429 13.9429Z' fill='black'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-color: transparent
+    border: 0
+    top: 29%
+    right: 30px
+    &:focus, &:active
+      outline: none
+  &__cart
+    justify-content: space-between
+  &__cart-info
+    font-family: $regular, serif
+    font-size: 18px
+  &__cart-price
+    span
+      font-family: $bold, serif
+  &__cart-link
+    color: $blue
+    border-bottom: 1px dashed $blue
+    padding-top: 11px
+    display: inline-block
+    font-size: 16px
+  &__cart-btn
+    width: 50px
+    height: 50px
+    position: relative
+  &__counters
+    width: 33px
+    height: 24px
+    top: -15px
+    right: -5px
+.top-counters
+    color: #fff
+    font-size: 12px
+    line-height: 14px
+    font-family: $regular, serif
+    background-color: $red
+    -webkit-border-radius: 10px
+    -moz-border-radius: 10px
+    border-radius: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    box-sizing: border-box
+    position: absolute
+
+// banner
+
+.banner
+  &__item
+    height: 500px
+    position: relative
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      background-color: rgba(10, 74, 131, 0.8)
+    &:after
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      margin: 0 auto
+      background-image: url('../img/banner-bg-1.png')
+  &__title
+    color: #fff
+    font-size: 50px
+    font-family: $bold, serif
+    line-height: 58px
+    z-index: 10
+    background-image: url("data:image/svg+xml,%3Csvg width='1259' height='44' viewBox='0 0 1259 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.2'%3E%3Cpath d='M0 2H1259' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath d='M0 22H1259' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath d='M0 42H1259' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/g%3E%3C/svg%3E")
+    width: 90%
+    text-align: center
+    background-size: cover
+    background-position: center
+
+// popular product
+.product-list
+  padding-top: 60px
+  padding-bottom: 60px
+  &__item
+    background-color: #fff
+    border: 1px solid #E1E1E1
+    box-sizing: border-box
+    transition: $trans
+    margin-bottom: 5px
+    &:hover
+      box-sizing: border-box
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15)
+  &__info
+    padding: 30px
+    box-sizing: border-box
+    position: relative
+    z-index: 1
+  &__title
+    font-size: 25px
+    line-height: 30px
+    text-decoration: underline
+    font-family: $bold, serif
+    transition: $trans
+    display: block
+    margin-bottom: 10px
+    height: 90px
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 30px
+      left: 0
+      right: 0
+      margin: 0 auto
+      background-image: url("data:image/svg+xml,%3Csvg width='334' height='44' viewBox='0 0 334 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H334M0 22H334M0 42H334' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+      background-size: cover
+      height: 45px
+      width: 90%
+      z-index: -1
+    &:hover
+      color: $red
+  &__article
+    justify-content: space-between
+    font-size: 20px
+    line-height: 30px
+    margin-bottom: 70px
+  &__bottom
+    height: 60px
+  &__price-wrp
+    font-size: 25px
+    line-height: 30px
+    font-family: $bold, serif
+  &__btn
+    width: 147px
+    max-width: 100%
+    height: 45px
+  .slider-arrow_prev
+    left: -50px
+  .slider-arrow_next
+    right: -50px
+
+// about
+.about
+  padding-top: 60px
+  padding-bottom: 60px
+  &__text
+    p
+      font-size: 20px
+      line-height: 25px
+      margin-bottom: 15px
+  &__more
+    text-decoration: underline
+    font-size: 20px
+    cursor: pointer
+    background-color: transparent
+    border: 0
+    padding: 0
+    margin-top: 10px
+    &:active, &:focus
+      outline: none
+    &:hover
+      text-decoration: none
+  &__advantages
+    margin-top: 30px
+    justify-content: space-around
+  &__item
+    text-align: center
+    background-image: url("data:image/svg+xml,%3Csvg width='216' height='110' viewBox='0 0 216 110' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H216M0 22.0948H216M0 42.1896H216M0 64.2938H216M0 85.8957H216M0 108H216' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    background-position: center
+  &__item-title
+    font-family: $bold, serif
+    font-size: 30px
+    margin-top: 30px
+    margin-bottom: 40px
+  &__item-descr
+    font-size: 20px
+    line-height: 25px
+
+
+// news
+
+.news
+  padding-top: 60px
+  padding-bottom: 60px
+  &__active
+    background-repeat: no-repeat
+    background-size: cover
+    display: flex
+    justify-content: flex-end
+    position: relative
+  &__active-info
+    background-color: $blue
+    width: 53%
+    color: #fff
+    padding: 30px 25px 30px 28px
+    box-sizing: border-box
+  &__active-date
+    font-size: 14px
+    margin-bottom: 23px
+  &__active-title
+    font-family: $medium, Serif
+    font-size: 18px
+    margin-bottom: 28px
+    line-height: 21px
+    &:before
+      content: ''
+      width: 90%
+      height: 40px
+      position: absolute
+      left: 0
+      right: 0
+      margin: 0 auto
+      background-image: url("data:image/svg+xml,%3Csvg width='354' height='44' viewBox='0 0 354 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M0 2H354M0 22H354M0 42H354' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+      background-size: contain
+  &__active-introtext
+    margin-bottom: 40px
+    font-size: 16px
+    line-height: 22px
+  &__list-img
+    margin-right: 30px
+    display: block
+  &__list-item:not(:last-child)
+    margin-bottom: 40px
+  &__list-date
+    color: #777
+    font-size: 14px
+    margin-bottom: 15px
+  &__list-title
+    font-family: $medium, serif
+    font-size: 18px
+    line-height: 21px
+    margin-bottom: 20px
+    display: block
+    transition: $trans
+    &:hover
+      color: $red
+  &__list-ntrotext
+    font-size: 16px
+    line-height: 22px
+  &__btn
+    width: 233px
+    max-width: 100%
+    margin: 30px auto 0
+    text-transform: none
+    font-family: $regular, serif
+    font-size: 16px
+    transition: $trans
+    &:hover
+      background-color: $blue
+      color: #fff
+
+
+// main text
+.main-text
+  &__content
+    margin-top: 35px
+  p
+    margin-bottom: 40px
+    font-size: 20px
+    line-height: 25px
+    font-family: $regular, serif
+
+//footer
+
+.footer
+  background-color: $blue
+  color: #fff
+  padding-top: 60px
+  padding-bottom: 60px
+  &__title
+    font-size: 25px
+    font-family: $bold, serif
+    margin-bottom: 22px
+  &__list-link
+    text-decoration: underline
+    font-size: 20px
+    line-height: 20px
+    transition: $trans
+    display: block
+    margin-bottom: 10px
+    &:hover
+      text-decoration: none
+  &__pay
+  &__pay-item
+    background-color: #fff
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 5px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-right: 20px
+    width: 98px
+    height: 60px
+    box-sizing: border-box
+  &__phone
+    font-family: $bold, serif
+    font-size: 25px
+    margin-bottom: 12px
+    display: block
+    transition: $trans
+    &:hover
+      text-decoration: underline
+  &__adress
+    font-size: 20px
+    margin-bottom: 10px
+  &__email
+    font-size: 20px
+    display: block
+    transition: $trans
+    &:hover
+      text-decoration: underline
+  &__copyright
+    margin-top: 30px
+    justify-content: space-between
+  &__copyright-text
+    font-size: 20px
+    font-family: $regular, serif
+  &__akticom
+    align-items: center
+    justify-content: flex-end
+  &__akticom-link
+    padding-left: 30px
+
+// mobile
+
+.mobile-header
+  display: none
+  background-color: $blue
+  width: 100%
+  height: 60px
+  background-image: url("data:image/svg+xml,%3Csvg width='320' height='44' viewBox='0 0 320 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M0 2H320' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath opacity='0.2' d='M0 22H320' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath opacity='0.2' d='M0 42H320' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E")
+  background-size: contain
+  background-repeat: no-repeat
+  position: relative
+  justify-content: space-between
+  align-items: center
+  &__logo
+    svg
+      fill: #fff
+  &__cart-btn
+    width: 42px
+    height: 42px
+    margin-right: 15px
+  &__counters
+    width: 25px
+    height: 18px
+    top: 3px
+    right: 5px
+
+.hamburger
+    display: block
+    width: 26px
+    height: 26px
+    -webkit-transition: .5s all ease-in-out
+    -o-transition: .5s all ease-in-out
+    transition: .5s all ease-in-out
+    z-index: 10
+    margin-left: 15px
+    &:before, &:after
+      position: absolute
+      content: ''
+      left: 30px
+      -webkit-transform: translateX(-50%)
+      -ms-transform: translateX(-50%)
+      transform: translateX(-50%)
+      background-color: #fff
+      width: 26px
+      height: 5px
+      -webkit-transition: .5s all ease-in-out
+      -o-transition: .5s all ease-in-out
+      transition: .5s all ease-in-out
+    &:before
+      top: 20px
+    &:after
+      bottom: 20px
+    &.is-active:before
+      transform: translateX(-50%) rotate(45deg)
+      background-color: #fff
+      top: 32px
+    &.is-active:after
+      transform: translateX(-50%) rotate(-45deg)
+      background-color: #fff
+      bottom: 23px
+.mobile-hide
+  display: none
+  background-color: #f5f5f5
+  &__wrapper
+    padding: 0 15px
+  &__btn
+    height: 50px
+    margin-bottom: 10px
+  &__form
+    margin-bottom: 10px
+    position: relative
+  &__submit
+    right: 3%
+  &__nav
+    background-color: #fff
+    padding: 55px 15px 15px
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1)
+    text-align: center
+  &__nav-item
+    margin-bottom: 40px
+  &__nav-link
+    font-size: 20px
+    font-family: $regular, serif
+.mobile-news
+  display: none
+  padding-top: 60px
+  padding-bottom: 60px
+  &__info
+    background-color: $blue
+    width: 100%
+    color: #fff
+    padding: 30px 25px 30px 28px
+    box-sizing: border-box
+    margin-bottom: 20px
+  &__active-btn
+    width: 100%
+  &__img
+    width: 100%
+  &__btn
+    width: 100%
+  &__arrow-wrp
+    top: 10%
