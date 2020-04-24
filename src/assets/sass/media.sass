@@ -1,17 +1,31 @@
+@media (max-width: 1600.98px)
+  .header__cart-info
+    margin-left: 60px
 @media (max-width: 1366.98px)
   .container
     padding: 0 30px
   .title
     padding: 0 15px
+  .header__cart-info
+    margin-left: 0
   .slider-arrow
     &_prev
       left: 0
     &_next, .product-list .slider-arrow_next
       right: 0
   .product-list .slider-arrow_prev
-    left: 0
+    left: -30px
   .product-list .slider-arrow_next
-    right: 0
+    right: -30px
+  .product-list
+    &__bottom
+      justify-content: center
+      flex-wrap: wrap
+      height: 90px
+    &__price-wrp
+      width: 100%
+      height: 70px
+      text-align: center
 @media (max-width: 1199.98px)
   .news
     &__active-info
@@ -42,6 +56,8 @@
   .product-list
     &__item
       margin-left: 30px
+    &__slider
+      margin-left: -15px
   .product-list .slider-arrow_prev
     left: -10px
   .product-list .slider-arrow_next

@@ -330,6 +330,7 @@ a
     margin-bottom: 70px
   &__bottom
     height: 60px
+    justify-content: space-between
   &__price-wrp
     font-size: 25px
     line-height: 30px
@@ -629,3 +630,138 @@ a
     width: 100%
   &__arrow-wrp
     top: 10%
+
+// breadcrumbs
+.breadcrumbs
+  padding: 35px 0
+  &__link
+    color: $red
+    font-size: 16px
+    font-family: $regular, serif
+    &:hover
+      text-decoration: underline
+    &_active
+      color: $black
+      cursor: default
+  &__separator
+    display: block
+    margin: 0 10px
+
+
+.page-news
+  &__title
+    background-image: url("data:image/svg+xml,%3Csvg width='1657' height='44' viewBox='0 0 1657 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H1657M0 22H1657M0 42H1657' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    -webkit-background-size: contain
+    background-size: contain
+    height: 45px
+    margin-bottom: 35px
+    span
+      font-family: $regular, serif
+  &__pagetitle
+    font-size: 40px
+    font-family: $bold, serif
+  &__select
+    margin-left: 20px
+
+.news-list
+  &__img
+    height: 133px
+    -webkit-background-size: cover
+    background-size: cover
+    transition: .5s all ease-in-out
+  &__hide
+    opacity: 0
+    position: absolute
+    pointer-events: none
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 3
+    transition: .5s all ease-in-out
+    color: #fff
+    transform: translateY(100%)
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 25px
+  &__hide-title
+    font-size: 25px
+    font-family: $bold, serif
+    margin-top: 30px
+  &__item
+    border: 1px solid #E1E1E1
+    box-sizing: border-box
+    padding: 15px 34px
+    width: 24%
+    margin-bottom: 30px
+    background-color: #fff
+    position: relative
+    height: 485px
+    z-index: 2
+    transition: .5s all ease-in-out
+    &:hover .news-list__img
+      position: absolute
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+    &:hover  .news-list__btn
+      position: absolute
+      width: 80%
+      left: 0
+      right: 0
+      margin: 0 auto
+      bottom: 15px
+      z-index: 2
+      background-color: #fff
+      color: $black
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 4.5H9M9 4.5L5.5 1M9 4.5L5.5 8' stroke='%232A2A2A'/%3E%3C/svg%3E%0A")
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15)
+    &:hover .news-list__hide
+      opacity: 1
+      -webkit-transform: translateY(0)
+      -ms-transform: translateY(0)
+      transform: translateY(0)
+    &:before
+      content: ''
+      width: 100%
+      height: 100%
+      opacity: .8
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 1
+      transition: .5s all ease-in-out
+    &:hover::before
+      background-color: $blue
+  &__date
+    color: $black-two
+    font-size: 14px
+    margin-bottom: 20px
+  &__name
+    font-family: $medium, Serif
+    font-size: 18px
+    line-height: 21px
+    background-image: url("data:image/svg+xml,%3Csvg width='319' height='44' viewBox='0 0 319 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.1' d='M0 2H319M0 22H319M0 42H319' stroke='%23030303' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    -webkit-background-size: contain
+    background-size: contain
+    margin-bottom: 20px
+  &__description
+    line-height: 22px
+    margin-bottom: 22px
+    margin-top: 20px
+    height: 135px
+    p
+      margin-bottom: 10px
+
+
+
+
+
+
