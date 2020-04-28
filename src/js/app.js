@@ -57,7 +57,7 @@ $(document).ready(function () {
         }
     });
 
-        // js-banner-slider
+    // js-banner-slider
     $('.js-mobile-news-slider').owlCarousel({
         items: 1,
         loop: true,
@@ -78,4 +78,37 @@ $(() => {
             .slideToggle();
         //     .removeClass('feed-open');
     });
+});
+
+
+$(() => {
+    $(".js-select").select2({
+        language: "ru",
+        minimumResultsForSearch: -1
+    });
+});
+
+function formatState (state) {
+  if (!state.id) {
+    return state.text;
+  }
+
+  var baseUrl = "../assets/img/";
+  var $state = $(
+    '<span class="d-flex align-items-center"><img class="header__currency-img" /> <span class="header__currency-title"></span></span>'
+  );
+
+  // Use .text() instead of HTML string concatenation to avoid script injection issues
+  $state.find("span").text(state.text);
+  $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
+
+  return $state;
+};
+
+$(".js-select-state").select2({
+    templateSelection: formatState,
+    templateResult: formatState,
+    language: "ru",
+    minimumResultsForSearch: -1,
+    id: "id"
 });
