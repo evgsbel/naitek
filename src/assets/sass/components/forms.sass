@@ -5,7 +5,7 @@
     -webkit-border-radius: 3px
     -moz-border-radius: 3px
     border-radius: 3px
-    border: 3px solid $blue
+    border: 1px solid #777
     padding-left: 20px
     height: 50px
     &:focus, &:active
@@ -15,6 +15,46 @@
       font-family: $regular, serif
       font-size: 16px
       line-height: 19px
+  &__textarea
+    padding-top: 15px
+
+// checkbox
+.checkbox input
+  position: absolute
+  z-index: -1
+  opacity: 0
+  margin: 10px 0 0 20px
+
+.checkbox__text
+  position: relative
+  padding: 0 0 0 60px
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    top: -4px
+    left: 0
+    width: 30px
+    height: 30px
+    border-radius: 3px
+    background-color: #fff
+    border: 1px solid #777777
+    transition: .2s
+  &:after
+    content: none
+    transition: .2s
+.checkbox input
+  &:checked + .checkbox__text
+    &:after
+      content: ''
+      position: absolute
+      top: 5px
+      left: 6px
+      width: 19px
+      height: 15px
+      background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 7L7 12L17 2' stroke='%23D3122B' stroke-width='3'/%3E%3C/svg%3E%0A")
+
+
 
 
 

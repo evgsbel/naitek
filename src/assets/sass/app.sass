@@ -113,6 +113,8 @@ a
     align-items: center
     img
       display: block
+  &__input
+    border: 3px solid $blue
   &__currency-title
     padding-top: 5px
 #select2-select-currency-results
@@ -873,6 +875,163 @@ a
     .header
       transition: .3s all ease-in-out
       background: rgba(255, 255, 255, 0.9)
+      padding: 15px 0
     .top-bar
       transition: .3s all ease-in-out
       background: rgba(255, 255, 255, 0.9)
+
+.pagination
+  margin: 55px 0
+  &__btn
+    width: 115px
+    margin-right: 35px
+  &__arrow
+    svg
+      stroke: $black
+      transition: $trans
+    &:hover
+      svg
+        stroke: $red
+    &_left
+      margin-right: 30px
+    &_right
+      margin-left: 30px
+      transform: rotate(180deg)
+  &__number
+    font-size: 19px
+    width: 36px
+    height: 36px
+    text-align: center
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    transition: $trans
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+    box-sizing: border-box
+    font-family: $regular, serif
+    text-align: center
+    &_active, &:hover
+      background-color: $red
+      color: #fff
+
+.alphabet
+  margin-bottom: 40px
+  &__link
+    font-size: 19px
+    text-decoration: underline
+    line-height: 22px
+    font-family: $regular, serif
+    transition: $trans
+    width: 36px
+    height: 36px
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    &_active, &:hover
+      color: #fff
+      text-decoration: none
+      background-color: $red
+      font-family: $regular, serif
+      
+// catalog
+.catalog
+  &__item
+    background-color: #fff
+    border: 1px solid #E1E1E1
+    box-sizing: border-box
+    width: 100%
+    margin-bottom: 30px
+  &__info
+    padding: 25px 30px 0 50px
+    position: relative
+    z-index: 1
+    width: 100%
+    &-item
+      margin-bottom: 32px
+    &-title
+      font-family: $bold, serif
+      font-size: 25px
+      text-decoration: underline
+      height: 44px
+      margin-bottom: 8px
+      &:before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        top: 18px
+        background-image: url("data:image/svg+xml,%3Csvg width='334' height='44' viewBox='0 0 334 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H334M0 22H334M0 42H334' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        width: 334px
+        height: 44px
+        z-index: -1
+        max-width: 100%
+    &-txt
+      font-size: 20px
+      span
+        display: inline-block
+        margin-left: 50px
+    &-price
+      font-size: 30px
+      font-family: $bold, serif
+    &-subtitle
+      font-size: 20px
+      font-family: $bold, serif
+      margin-bottom: 10px
+    &-details
+      font-size: 18px
+    &-btn
+      width: 147px
+      max-width: 100%
+
+
+.feedback
+  background-color: #F5F5F5
+  padding-top: 55px
+  padding-bottom: 75px
+  text-align: center
+  .container
+    width: 1042px
+  &__title
+    font-family: $bold, serif
+    font-size: 40px
+    margin-bottom: 10px
+  &__subtitle
+    font-size: 30px
+    color: #000
+    margin-bottom: 30px
+  &__form
+    flex-wrap: wrap
+  &__input
+    width: 335px
+    margin-bottom: 20px
+  &__textarea
+    height: 125px
+  &__btn
+    margin: 0 auto
+    width: 257px
+    
+.confidencial
+  margin-top: 20px
+  margin-bottom: 30px
+  text-align: left
+  &__text
+    font-size: 20px
+    color: #000
+    line-height: 25px
+
+
+
+
+
+
+
+
+
+
+

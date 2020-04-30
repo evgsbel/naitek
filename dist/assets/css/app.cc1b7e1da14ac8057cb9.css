@@ -7522,7 +7522,7 @@ a.text-dark:hover, a.text-dark:focus {
   .form__input {
     max-width: 100%;
     border-radius: 3px;
-    border: 3px solid #0A4A83;
+    border: 1px solid #777;
     padding-left: 20px;
     height: 50px; }
     .form__input:focus, .form__input:active {
@@ -7547,6 +7547,42 @@ a.text-dark:hover, a.text-dark:focus {
       font-family: "gt_eesti_pro_displayregular", serif;
       font-size: 16px;
       line-height: 19px; }
+  .form__textarea {
+    padding-top: 15px; }
+
+.checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px; }
+
+.checkbox__text {
+  position: relative;
+  padding: 0 0 0 60px;
+  cursor: pointer; }
+  .checkbox__text:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #777777;
+    transition: .2s; }
+  .checkbox__text:after {
+    content: none;
+    transition: .2s; }
+
+.checkbox input:checked + .checkbox__text:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  width: 19px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg width='19' height='15' viewBox='0 0 19 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 7L7 12L17 2' stroke='%23D3122B' stroke-width='3'/%3E%3C/svg%3E%0A"); }
 
 .button {
   background-color: transparent;
@@ -7562,10 +7598,13 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 3px;
   border: 0;
   box-sizing: border-box;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  transition: .3s all ease-in-out; }
   .button_red {
     background-color: #D3122B;
     color: #fff; }
+    .button_red:hover {
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15); }
   .button_service {
     border: 1px solid #AFAFAF;
     background-color: #fff;
@@ -7769,6 +7808,9 @@ a {
   align-items: center; }
   .header__currency-img img {
     display: block; }
+
+.header__input {
+  border: 3px solid #0A4A83; }
 
 .header__currency-title {
   padding-top: 5px; }
@@ -8504,10 +8546,148 @@ a {
     transition: height 0.3s; }
     .fixed.is-active .header {
       transition: .3s all ease-in-out;
-      background: rgba(255, 255, 255, 0.9); }
+      background: rgba(255, 255, 255, 0.9);
+      padding: 15px 0; }
     .fixed.is-active .top-bar {
       transition: .3s all ease-in-out;
       background: rgba(255, 255, 255, 0.9); }
+
+.pagination {
+  margin: 55px 0; }
+  .pagination__btn {
+    width: 115px;
+    margin-right: 35px; }
+  .pagination__arrow svg {
+    stroke: #2A2A2A;
+    transition: 0.3s all ease-in-out; }
+  .pagination__arrow:hover svg {
+    stroke: #D3122B; }
+  .pagination__arrow_left {
+    margin-right: 30px; }
+  .pagination__arrow_right {
+    margin-left: 30px;
+    transform: rotate(180deg); }
+  .pagination__number {
+    font-size: 19px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all ease-in-out;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-family: "gt_eesti_pro_displayregular", serif;
+    text-align: center; }
+    .pagination__number_active, .pagination__number:hover {
+      background-color: #D3122B;
+      color: #fff; }
+
+.alphabet {
+  margin-bottom: 40px; }
+  .alphabet__link {
+    font-size: 19px;
+    text-decoration: underline;
+    line-height: 22px;
+    font-family: "gt_eesti_pro_displayregular", serif;
+    transition: 0.3s all ease-in-out;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .alphabet__link_active, .alphabet__link:hover {
+      color: #fff;
+      text-decoration: none;
+      background-color: #D3122B;
+      font-family: "gt_eesti_pro_displayregular", serif; }
+
+.catalog__item {
+  background-color: #fff;
+  border: 1px solid #E1E1E1;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 30px; }
+
+.catalog__info {
+  padding: 25px 30px 0 50px;
+  position: relative;
+  z-index: 1;
+  width: 100%; }
+  .catalog__info-item {
+    margin-bottom: 32px; }
+  .catalog__info-title {
+    font-family: "gt_eesti_pro_displaybold", serif;
+    font-size: 25px;
+    text-decoration: underline;
+    height: 44px;
+    margin-bottom: 8px; }
+    .catalog__info-title:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 18px;
+      background-image: url("data:image/svg+xml,%3Csvg width='334' height='44' viewBox='0 0 334 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H334M0 22H334M0 42H334' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      width: 334px;
+      height: 44px;
+      z-index: -1;
+      max-width: 100%; }
+  .catalog__info-txt {
+    font-size: 20px; }
+    .catalog__info-txt span {
+      display: inline-block;
+      margin-left: 50px; }
+  .catalog__info-price {
+    font-size: 30px;
+    font-family: "gt_eesti_pro_displaybold", serif; }
+  .catalog__info-subtitle {
+    font-size: 20px;
+    font-family: "gt_eesti_pro_displaybold", serif;
+    margin-bottom: 10px; }
+  .catalog__info-details {
+    font-size: 18px; }
+  .catalog__info-btn {
+    width: 147px;
+    max-width: 100%; }
+
+.feedback {
+  background-color: #F5F5F5;
+  padding-top: 55px;
+  padding-bottom: 75px;
+  text-align: center; }
+  .feedback .container {
+    width: 1042px; }
+  .feedback__title {
+    font-family: "gt_eesti_pro_displaybold", serif;
+    font-size: 40px;
+    margin-bottom: 10px; }
+  .feedback__subtitle {
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 30px; }
+  .feedback__form {
+    flex-wrap: wrap; }
+  .feedback__input {
+    width: 335px;
+    margin-bottom: 20px; }
+  .feedback__textarea {
+    height: 125px; }
+  .feedback__btn {
+    margin: 0 auto;
+    width: 257px; }
+
+.confidencial {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: left; }
+  .confidencial__text {
+    font-size: 20px;
+    color: #000;
+    line-height: 25px; }
 
 @media (max-width: 1366.98px) {
   .container {
@@ -8647,4 +8827,4 @@ a {
     display: block; } }
 
 
-/*# sourceMappingURL=app.ddd6a709d546e7f2138c.css.map*/
+/*# sourceMappingURL=app.cc1b7e1da14ac8057cb9.css.map*/
