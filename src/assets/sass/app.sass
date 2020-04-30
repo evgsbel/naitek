@@ -78,9 +78,11 @@ a
 //Header
 .top-bar
   padding: 20px 0
+  background-color: #fff
   //logo
 .logo
   max-width: 400px
+  display: flex
   &__img
     padding-right: 15px
     margin-right: 15px
@@ -99,6 +101,18 @@ a
     background-image: url("data:image/svg+xml,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 8.5L7.5 3L13 8.5' stroke='%23D3122B' stroke-width='3'/%3E%3C/svg%3E%0A")
   &__currency-img
     margin-right: 8px
+    background-color: #fff
+    border: 1px solid #D6D6D6
+    box-sizing: border-box
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1)
+    border-radius: 3px
+    width: 24px
+    height: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      display: block
   &__currency-title
     padding-top: 5px
 #select2-select-currency-results
@@ -560,7 +574,6 @@ a
   background-color: $blue
   width: 100%
   height: 60px
-  background-image: url("data:image/svg+xml,%3Csvg width='320' height='44' viewBox='0 0 320 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.2' d='M0 2H320' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath opacity='0.2' d='M0 22H320' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3Cpath opacity='0.2' d='M0 42H320' stroke='white' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E")
   background-size: contain
   background-repeat: no-repeat
   position: relative
@@ -636,6 +649,13 @@ a
   &__nav-link
     font-size: 20px
     font-family: $regular, serif
+  &__currency
+    margin-bottom: 20px
+  &__currency-title
+    font-family: $regular, serif
+    color: $black
+
+//
 .mobile-news
   display: none
   padding-top: 60px
@@ -835,11 +855,24 @@ a
   background-color: $blue
   color: #fff
 
+//fixed
 
-
-
-
-
-
-
-
+.fixed
+  width: 100%
+  max-width: 100%
+  z-index: 100
+  height: auto
+  transition: .3s all ease-in-out
+  &.is-active
+    transition: .3s all ease-in-out
+    background: rgba(255, 255, 255, 0.9)
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+    top: 0
+    position: fixed
+    transition: height 0.3s
+    .header
+      transition: .3s all ease-in-out
+      background: rgba(255, 255, 255, 0.9)
+    .top-bar
+      transition: .3s all ease-in-out
+      background: rgba(255, 255, 255, 0.9)

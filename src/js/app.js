@@ -93,9 +93,9 @@ function formatState (state) {
     return state.text;
   }
 
-  var baseUrl = "../assets/img/";
+  var baseUrl = "./assets/img/";
   var $state = $(
-    '<span class="d-flex align-items-center"><img class="header__currency-img" /> <span class="header__currency-title"></span></span>'
+    '<span class="d-flex align-items-center"><div class="header__currency-img"><img class="" /></div> <span class="header__currency-title"></span></span>'
   );
 
   // Use .text() instead of HTML string concatenation to avoid script injection issues
@@ -111,4 +111,19 @@ $(".js-select-state").select2({
     language: "ru",
     minimumResultsForSearch: -1,
     id: "id"
+});
+
+// fix header
+$(function(){
+	$fixBlock = $('.fixed');
+	$fixBlock.css('width', $fixBlock.outerWidth());
+	$window = $(window);
+	// $h = $fixBlock.offset().top;
+	$window.scroll(function(){
+		if ($window.scrollTop() > 0){
+			$fixBlock.addClass('is-active');
+		} else {
+			$fixBlock.removeClass('is-active');
+		}
+	});
 });

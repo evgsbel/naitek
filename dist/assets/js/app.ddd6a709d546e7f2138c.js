@@ -307,7 +307,7 @@ function formatState(state) {
   }
 
   var baseUrl = "./assets/img/";
-  var $state = $('<span class="d-flex align-items-center"><img class="header__currency-img" /> <span class="header__currency-title"></span></span>'); // Use .text() instead of HTML string concatenation to avoid script injection issues
+  var $state = $('<span class="d-flex align-items-center"><div class="header__currency-img"><img class="" /></div> <span class="header__currency-title"></span></span>'); // Use .text() instead of HTML string concatenation to avoid script injection issues
 
   $state.find("span").text(state.text);
   $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
@@ -321,10 +321,24 @@ $(".js-select-state").select2({
   language: "ru",
   minimumResultsForSearch: -1,
   id: "id"
+}); // fix header
+
+$(function () {
+  $fixBlock = $('.fixed');
+  $fixBlock.css('width', $fixBlock.outerWidth());
+  $window = $(window); // $h = $fixBlock.offset().top;
+
+  $window.scroll(function () {
+    if ($window.scrollTop() > 0) {
+      $fixBlock.addClass('is-active');
+    } else {
+      $fixBlock.removeClass('is-active');
+    }
+  });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.23d2e77bf004e564eb81.js.map
+//# sourceMappingURL=app.ddd6a709d546e7f2138c.js.map
