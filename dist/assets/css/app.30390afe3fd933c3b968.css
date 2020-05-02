@@ -8734,6 +8734,10 @@ a {
     background-repeat: no-repeat;
     height: 45px; }
 
+@media (max-width: 1600.98px) {
+  .page-news__title {
+    margin-top: 40px; } }
+
 @media (max-width: 1366.98px) {
   .container {
     padding: 0 30px; }
@@ -8922,4 +8926,4 @@ a {
     height: auto; } }
 
 
-/*# sourceMappingURL=app.119f6fbc546c99955953.css.map*/
+/*# sourceMappingURL=app.30390afe3fd933c3b968.css.map*/
