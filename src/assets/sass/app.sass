@@ -8,6 +8,29 @@
 @import 'components/buttons.sass'
 @import 'components/sliders-elements.sass'
 
+@-webkit-keyframes pulse
+  0%
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 74, 131, 0.4)
+
+  70%
+    -webkit-box-shadow: 0 0 0 10px rgba(0, 74, 131, 0)
+
+  100%
+    -webkit-box-shadow: 0 0 0 0 rgba(0, 74, 131, 0)
+
+@keyframes pulse
+  0%
+    -moz-box-shadow: 0 0 0 0 rgba(0, 74, 131, 0.4)
+    box-shadow: 0 0 0 0 rgba(0, 74, 131, 0.4)
+
+  70%
+    -moz-box-shadow: 0 0 0 10px rgba(0, 74, 131, 0)
+    box-shadow: 0 0 0 10px rgba(0, 74, 131, 0)
+
+  100%
+    -moz-box-shadow: 0 0 0 0 rgba(0, 74, 131, 0)
+    box-shadow: 0 0 0 0 rgba(0, 74, 131, 0)
+
 .container
   width: 1400px
   max-width: 100%
@@ -148,7 +171,7 @@ a
   &__hide
     opacity: 0
     position: absolute
-    top: -155px
+    top: -300px
     right: 0
     border: 1px solid #D7D7D7
     box-sizing: border-box
@@ -864,21 +887,45 @@ a
   max-width: 100%
   z-index: 100
   height: auto
-  transition: .3s all ease-in-out
-  &.is-active
-    transition: .3s all ease-in-out
+  display: none
+  top: 0
+  position: fixed
+  background: rgba(255, 255, 255, 0.9)
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+  .header
     background: rgba(255, 255, 255, 0.9)
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
-    top: 0
-    position: fixed
-    transition: height 0.3s
-    .header
-      transition: .3s all ease-in-out
-      background: rgba(255, 255, 255, 0.9)
-      padding: 15px 0
-    .top-bar
-      transition: .3s all ease-in-out
-      background: rgba(255, 255, 255, 0.9)
+    padding: 15px 0 25px
+    display: none
+  .top-bar
+    background: rgba(255, 255, 255, 0.9)
+  &__arrow
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0 auto
+    text-align: center
+    height: 27px
+    background-color: #fff
+    bottom: -10px
+    display: block
+    border: 1px solid #fff
+    width: 36px
+    height: 30px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    transition: $trans
+    animation: pulse 2s infinite
+    &.is-active
+      transform: rotate(180deg)
+      animation: none
+    &:hover
+       animation: none
+       box-shadow: 0 0  0 2px rgba(0, 74, 131, 0.4)
+
+
 
 .pagination
   margin: 55px 0
@@ -918,6 +965,8 @@ a
 
 .alphabet
   margin-bottom: 40px
+  &__wrapper
+    justify-content: space-between
   &__link
     font-size: 19px
     text-decoration: underline
@@ -953,6 +1002,7 @@ a
     width: 100%
     &-item
       margin-bottom: 32px
+      justify-content: space-between
     &-title
       font-family: $bold, serif
       font-size: 25px
@@ -1025,13 +1075,14 @@ a
     color: #000
     line-height: 25px
 
-
-
-
-
-
-
-
-
-
-
+.modal-form
+  display: none
+  width: 690px
+  max-width: 100%
+  margin: 0 auto
+  text-align: center
+  &__title
+    margin-bottom: 40px
+    background-image: url("data:image/svg+xml,%3Csvg width='918' height='44' viewBox='0 0 918 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H918M0 22H918M0 42H918' stroke='%23E5E5E5' stroke-width='4' stroke-dasharray='4 20'/%3E%3C/svg%3E%0A")
+    background-repeat: no-repeat
+    height: 45px

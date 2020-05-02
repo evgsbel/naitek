@@ -7,9 +7,7 @@
 
 $(document).ready(function () {
 
-    $('.js-hover-hide-phone').click(function visibleHidePhoneClick() {
-        $(this).find('.top-contacts__hide').toggleClass('is-visible')
-    });
+
     $('.js-hover-hide-phone').hover(function visibleHidePhone() {
         $(this).find('.top-contacts__hide').toggleClass('is-visible')
     });
@@ -88,21 +86,21 @@ $(() => {
     });
 });
 
-function formatState (state) {
-  if (!state.id) {
-    return state.text;
-  }
+function formatState(state) {
+    if (!state.id) {
+        return state.text;
+    }
 
-  var baseUrl = "./assets/img/";
-  var $state = $(
-    '<span class="d-flex align-items-center"><div class="header__currency-img"><img class="" /></div> <span class="header__currency-title"></span></span>'
-  );
+    var baseUrl = "./assets/img/";
+    var $state = $(
+        '<span class="d-flex align-items-center"><div class="header__currency-img"><img class="" /></div> <span class="header__currency-title"></span></span>'
+    );
 
-  // Use .text() instead of HTML string concatenation to avoid script injection issues
-  $state.find("span").text(state.text);
-  $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
+    // Use .text() instead of HTML string concatenation to avoid script injection issues
+    $state.find("span").text(state.text);
+    $state.find("img").attr("src", baseUrl + "/" + state.element.value.toLowerCase() + ".svg");
 
-  return $state;
+    return $state;
 };
 
 $(".js-select-state").select2({
@@ -114,16 +112,34 @@ $(".js-select-state").select2({
 });
 
 // fix header
-$(function(){
-	$fixBlock = $('.fixed');
-	$fixBlock.css('width', $fixBlock.outerWidth());
-	$window = $(window);
-	// $h = $fixBlock.offset().top;
-	$window.scroll(function(){
-		if ($window.scrollTop() > 0){
-			$fixBlock.addClass('is-active');
-		} else {
-			$fixBlock.removeClass('is-active');
-		}
-	});
+$(function () {
+    $fixBlock = $('.fixed');
+    $fixBlock.css('width', $fixBlock.outerWidth());
+    $window = $(window);
+    // $h = $fixBlock.offset().top;
+    $window.scroll(function () {
+        if ($window.scrollTop() > 180) {
+            $fixBlock.addClass('is-active');
+            $fixBlock.fadeIn()
+        } else {
+            $fixBlock.removeClass('is-active');
+            $fixBlock.fadeOut()
+        }
+    });
 });
+
+$('.js-open-fix-header').click(function openFixHeader() {
+    $(this).toggleClass('is-active');
+    $(this).closest('.fixed').find('.header').slideToggle();
+})
+
+$('[data-fancybox]').fancybox({
+    btnTpl: {
+        smallBtn:
+            '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small modal-form__close" title="{{CLOSE}}">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"/></svg>' +
+            "</button>"
+    }
+});
+
+

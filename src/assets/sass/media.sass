@@ -57,6 +57,26 @@
   .footer
     &__list
       margin-bottom: 30px
+  .news-list
+    &__item
+      height: auto
+    &__description
+      height: auto
+  .alphabet
+    &__wrapper
+      justify-content: center
+  .catalog
+    &__info
+      padding-left: 40px
+      &-item
+        flex-wrap: wrap
+      &-price
+        margin-top: 15px
+      &-btn
+        margin-top: 20px
+  .feedback
+    &__input
+      width: 32%
 @media (max-width: 991.98px)
   .top-bar
     &__logo
@@ -86,6 +106,14 @@
       margin-top: 30px
     &__logo
       margin-bottom: 15px
+  .news-list
+    &__item
+      width: 32%
+  .catalog
+    &__info
+      &-title
+        height: auto
+        margin-bottom: 20px
 @media (max-width: 767.98px)
   .title
     font-size: 35px
@@ -154,7 +182,41 @@
     display: none
   .mobile-news
     display: block
-
+  .news-list
+    &__item
+      width: 100%
+  .page-news__title
+    height: auto
+  .pagination
+    &__wrapper
+      flex-wrap: wrap
+      margin-top: 20px
+      justify-content: center
+    &__arrow
+      margin: 15px 0
+    &__numbers
+      flex-wrap: wrap
+      justify-content: center
+      text-align: center
+    &__btn
+      margin-right: 0
+  .catalog
+    &__item
+      flex-wrap: wrap
+      justify-content: center
+    &__img
+      width: 100%
+  .feedback
+    &__input
+      width: 100%
+  .fixed
+    &__arrow
+      display: none
+  .page-news__pagetitle
+    margin-bottom: 20px
+  .modal-form
+    &__title
+      height: auto
 
 
 

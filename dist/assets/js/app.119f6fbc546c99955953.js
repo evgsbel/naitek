@@ -232,9 +232,6 @@ __webpack_require__.r(__webpack_exports__);
 // //     });
 // // });
 $(document).ready(function () {
-  $('.js-hover-hide-phone').click(function visibleHidePhoneClick() {
-    $(this).find('.top-contacts__hide').toggleClass('is-visible');
-  });
   $('.js-hover-hide-phone').hover(function visibleHidePhone() {
     $(this).find('.top-contacts__hide').toggleClass('is-visible');
   });
@@ -329,16 +326,27 @@ $(function () {
   $window = $(window); // $h = $fixBlock.offset().top;
 
   $window.scroll(function () {
-    if ($window.scrollTop() > 0) {
+    if ($window.scrollTop() > 180) {
       $fixBlock.addClass('is-active');
+      $fixBlock.fadeIn();
     } else {
       $fixBlock.removeClass('is-active');
+      $fixBlock.fadeOut();
     }
   });
+});
+$('.js-open-fix-header').click(function openFixHeader() {
+  $(this).toggleClass('is-active');
+  $(this).closest('.fixed').find('.header').slideToggle();
+});
+$('[data-fancybox]').fancybox({
+  btnTpl: {
+    smallBtn: '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small modal-form__close" title="{{CLOSE}}">' + '<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"/></svg>' + "</button>"
+  }
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.cc1b7e1da14ac8057cb9.js.map
+//# sourceMappingURL=app.119f6fbc546c99955953.js.map

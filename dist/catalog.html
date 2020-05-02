@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Naitek - Каталог продукции</title>
-<link href="assets/css/vendors.cc1b7e1da14ac8057cb9.css" rel="stylesheet"><link href="assets/css/app.cc1b7e1da14ac8057cb9.css" rel="stylesheet"></head>
+<link href="assets/css/vendors.119f6fbc546c99955953.css" rel="stylesheet"><link href="assets/css/app.119f6fbc546c99955953.css" rel="stylesheet"></head>
 <body>
 <div class="hide-svg">
     <svg xmlns="http://www.w3.org/2000/svg">
@@ -241,7 +241,8 @@
                             <!--                        <a href="" class="top-contacts__phone top-contacts__hide-item">8 (495) 000-000</a>-->
                             <!--                        <a href="" class="top-contacts__phone top-contacts__hide-item">8 (495) 000-000</a>-->
                             <a href="" class="top-contacts__phone top-contacts__hide-item">8 (495) 000-000</a>
-                            <button class="button button_red top-contacts__btn">Обратная связь</button>
+                            <a href="#callback" data-fancybox="" class="button button_red top-contacts__btn">Обратная
+                                связь</a>
                             <div class="top-contacts__line"></div>
                             <div class="top-contacts__adress top-contacts__hide-item">Наш адрес: <br>
                                 г. Москва, ул. Советская 31,
@@ -262,7 +263,7 @@
                 <span class="mobile-hide__currency-title">Выберите валюту:</span>
                 <div class="currency header__currency mt-0">
                     <form action="" class="currency__form form">
-                        <select name="" id="select-currency-mobile" class="js-select-state  header__select">
+                        <select name="" id="select-currency-mobile-fix" class="js-select-state  header__select">
                             <option value="rrub">RUB</option>
                             <option value="ggbr">GBR</option>
                         </select>
@@ -301,7 +302,7 @@
                 </div>
                 <div class="currency header__currency">
                     <form action="" class="currency__form form">
-                        <select name="" id="select-currency" class="js-select-state  header__select">
+                        <select name="" id="select-currency-fixed" class="js-select-state  header__select">
                             <option value="rrub">RUB</option>
                             <option value="ggbr">GBR</option>
                         </select>
@@ -319,7 +320,137 @@
             </div>
         </div>
     </header>
+    <div class="fixed__arrow js-open-fix-header pulse">
+        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L7.5 7.5L13 2" stroke="#D3122B" stroke-width="3"/>
+        </svg>
+    </div>
 </div>
+<section class="top-bar">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <a href="/" class="top-bar__logo logo logo_blue">
+                <div class="logo__img">
+                    <svg width="177" height="38" viewBox="0 0 177 38" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#logo-n"></use>
+                    </svg>
+                </div>
+                <div class="logo__title">
+                    интернет магазин расходных
+                    материалов для элементного <br>
+                    анализа
+                </div>
+            </a>
+            <!--Only mobile-->
+            <div class="mobile-header">
+                <div class="hamburger"></div>
+                <a href="/" class="mobile-header__logo">
+                    <svg width="177" height="37" viewBox="0 0 177 37" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#footer-logo"></use>
+                    </svg>
+                </a>
+                <button class="button button_service button_service_mobile-cart mobile-header__cart-btn">
+                    <span class="top-counters mobile-header__counters">12</span>
+                </button>
+            </div>
+            <!--/Only mobile-->
+            <div class="top-bar__nav top-nav">
+                <ul class="top-nav__list d-flex ">
+                    <li class="top-nav__item"><a href="" class="top-nav__link">О компании</a></li>
+                    <li class="top-nav__item"><a href="" class="top-nav__link">Оплата и доставка</a></li>
+                    <li class="top-nav__item"><a href="" class="top-nav__link">Новости</a></li>
+                    <li class="top-nav__item"><a href="" class="top-nav__link">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="top-bar__contacts top-contacts d-flex">
+                <a href="email:info@chnso.ru" class="top-contacts__email">info@chnso.ru</a>
+                <div class="top-contacts__phone-wrapper js-hover-hide-phone">
+                    <div class="top-contacts__phone top-contacts__phone_hover">8 (495) 000-0000-0</div>
+                    <div class="top-contacts__hide">
+                        <!--                        <a href="" class="top-contacts__phone top-contacts__hide-item">8 (495) 000-000</a>-->
+                        <!--                        <a href="" class="top-contacts__phone top-contacts__hide-item">8 (495) 000-000</a>-->
+                        <a href="" class="top-contacts__phone top-contacts__hide-item">8 (495) 000-000</a>
+                        <a href="#callback" data-fancybox="" class="button button_red top-contacts__btn">Обратная
+                            связь</a>
+                        <div class="top-contacts__line"></div>
+                        <div class="top-contacts__adress top-contacts__hide-item">Наш адрес: <br>
+                            г. Москва, ул. Советская 31,
+                        </div>
+                        <div class="top-contacts__timework top-contacts__hide-item">Время работы: <br>
+                            с 9:00 до 21:00
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Only mobile-->
+<div class="mobile-hide">
+    <div class="mobile-hide__wrapper">
+        <div class="d-flex mobile-hide__currency align-items-center justify-content-between">
+            <span class="mobile-hide__currency-title">Выберите валюту:</span>
+            <div class="currency header__currency mt-0">
+                <form action="" class="currency__form form">
+                    <select name="" id="select-currency-mobile" class="js-select-state  header__select">
+                        <option value="rrub">RUB</option>
+                        <option value="ggbr">GBR</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <a href="" class="button button_red mobile-hide__btn">Каталог продукции</a>
+        <div class="search mobile-header__search">
+            <form action="" class="search__form form mobile-hide__form">
+                <input type="text" class="form__input search__input header__input"
+                       placeholder="Введите наименование или артикул...">
+                <input type="submit" value="" class="search__submit header__submit mobile-hide__submit">
+            </form>
+        </div>
+    </div>
+    <div class="mobile-hide__nav">
+        <ul class="mobile-hide__nav-wrapper">
+            <li class="mobile-hide__nav-item"><a href="" class="mobile-hide__nav-link">О компании</a></li>
+            <li class="mobile-hide__nav-item"><a href="" class="mobile-hide__nav-link">Оплата и доставка</a></li>
+            <li class="mobile-hide__nav-item"><a href="" class="mobile-hide__nav-link">Новости</a></li>
+            <li class="mobile-hide__nav-item"><a href="" class="mobile-hide__nav-link">Контакты</a></li>
+        </ul>
+    </div>
+</div>
+<!--Only mobile-->
+<header class="header">
+    <div class="container">
+        <div class="row header__wrapper">
+            <a href="" class="header__btn col-md-3 col-xl-2">Каталог продукции</a>
+            <div class="search header__search col-md-9 col-xl-6">
+                <form action="" class="search__form form">
+                    <input type="text" class="form__input search__input header__input"
+                           placeholder="Введите наименование или артикул...">
+                    <input type="submit" value="" class="search__submit header__submit">
+                </form>
+            </div>
+            <div class="currency header__currency">
+                <form action="" class="currency__form form">
+                    <select name="" id="select-currency" class="js-select-state  header__select">
+                        <option value="rrub">RUB</option>
+                        <option value="ggbr">GBR</option>
+                    </select>
+                </form>
+            </div>
+            <div class="header__cart col-md-10 col-xl-3 d-flex">
+                <div class="header__cart-info">
+                    <div class="header__cart-price">В корзине товаров на <span>271 000 ₽</span></div>
+                    <a href="" class="header__cart-link">в корзину</a>
+                </div>
+                <button class="button button_service button_service_cart header__cart-btn">
+                    <span class="top-counters header__counters">12</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
 <section class="breadcrumbs">
     <div class="container">
         <div class="row">
@@ -334,7 +465,7 @@
 </section>
 <section class="alphabet">
     <div class="container">
-        <div class="row justify-content-between">
+        <div class="row alphabet__wrapper">
             <a href="" class="alphabet__link alphabet__link_active">А</a>
             <a href="" class="alphabet__link">Б</a>
             <a href="" class="alphabet__link">В</a>
@@ -393,14 +524,14 @@
             <div class="catalog__item d-flex">
                 <img src="./assets/img/cat-01.png" alt="" class="catalog__img">
                 <div class="catalog__info">
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-title">Алюминий гранулированный от 0,2 до 0,5 мм 10 г</div>
                             <div class="catalog__info-txt">Каталожный номер <span>B1129</span></div>
                         </div>
                         <div class="catalog__info-price">854.00 ₽</div>
                     </div>
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-subtitle">Эквивалентные детали OEM:</div>
                             <div class="catalog__info-details">SC2383, SC2383, SC2383, SC2383, SC2383, SC2383, C2383,
@@ -414,14 +545,14 @@
             <div class="catalog__item d-flex">
                 <img src="./assets/img/cat-01.png" alt="" class="catalog__img">
                 <div class="catalog__info">
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-title">Алюминий гранулированный от 0,2 до 0,5 мм 10 г</div>
                             <div class="catalog__info-txt">Каталожный номер <span>B1129</span></div>
                         </div>
                         <div class="catalog__info-price">854.00 ₽</div>
                     </div>
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-subtitle">Эквивалентные детали OEM:</div>
                             <div class="catalog__info-details">SC2383, SC2383, SC2383, SC2383, SC2383, SC2383, C2383,
@@ -435,14 +566,14 @@
             <div class="catalog__item d-flex">
                 <img src="./assets/img/cat-01.png" alt="" class="catalog__img">
                 <div class="catalog__info">
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-title">Алюминий гранулированный от 0,2 до 0,5 мм 10 г</div>
                             <div class="catalog__info-txt">Каталожный номер <span>B1129</span></div>
                         </div>
                         <div class="catalog__info-price">854.00 ₽</div>
                     </div>
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-subtitle">Эквивалентные детали OEM:</div>
                             <div class="catalog__info-details">SC2383, SC2383, SC2383, SC2383, SC2383, SC2383, C2383,
@@ -456,14 +587,14 @@
             <div class="catalog__item d-flex">
                 <img src="./assets/img/cat-01.png" alt="" class="catalog__img">
                 <div class="catalog__info">
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-title">Алюминий гранулированный от 0,2 до 0,5 мм 10 г</div>
                             <div class="catalog__info-txt">Каталожный номер <span>B1129</span></div>
                         </div>
                         <div class="catalog__info-price">854.00 ₽</div>
                     </div>
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-subtitle">Эквивалентные детали OEM:</div>
                             <div class="catalog__info-details">SC2383, SC2383, SC2383, SC2383, SC2383, SC2383, C2383,
@@ -477,14 +608,14 @@
             <div class="catalog__item d-flex">
                 <img src="./assets/img/cat-01.png" alt="" class="catalog__img">
                 <div class="catalog__info">
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-title">Алюминий гранулированный от 0,2 до 0,5 мм 10 г</div>
                             <div class="catalog__info-txt">Каталожный номер <span>B1129</span></div>
                         </div>
                         <div class="catalog__info-price">854.00 ₽</div>
                     </div>
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-subtitle">Эквивалентные детали OEM:</div>
                             <div class="catalog__info-details">SC2383, SC2383, SC2383, SC2383, SC2383, SC2383, C2383,
@@ -498,14 +629,14 @@
             <div class="catalog__item d-flex">
                 <img src="./assets/img/cat-01.png" alt="" class="catalog__img">
                 <div class="catalog__info">
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-title">Алюминий гранулированный от 0,2 до 0,5 мм 10 г</div>
                             <div class="catalog__info-txt">Каталожный номер <span>B1129</span></div>
                         </div>
                         <div class="catalog__info-price">854.00 ₽</div>
                     </div>
-                    <div class="d-flex catalog__info-item justify-content-between">
+                    <div class="d-flex catalog__info-item">
                         <div>
                             <div class="catalog__info-subtitle">Эквивалентные детали OEM:</div>
                             <div class="catalog__info-details">SC2383, SC2383, SC2383, SC2383, SC2383, SC2383, C2383,
@@ -624,9 +755,30 @@
                     </svg>
                 </a>
             </div>
-
         </div>
     </div>
 </footer>
-<script src="assets/js/vendors.cc1b7e1da14ac8057cb9.js"></script><script src="assets/js/app.cc1b7e1da14ac8057cb9.js"></script></body>
+<section class="callback modal-form" id="callback">
+    <div class="div feedback__title modal-form__title">Заполните форму для обращения</div>
+    <div class="row">
+        <form action="" class="form feedback__form d-flex justify-content-between w-100">
+            <input type="text" class="form__input feedback__input" placeholder="Ваше имя">
+            <input type="tel" class="form__input feedback__input" placeholder="Ваш номер">
+            <textarea class="form__input form__textarea feedback__textarea w-100"
+                      placeholder="Ваш комментарий"></textarea>
+            <div class="confidencial">
+                <label class="checkbox">
+                    <input type="checkbox" name="confidencial" class="custom__input form__checkbox" value="yes" checked>
+                    <div class="confidencial__text checkbox__text">
+                        Нажимая кнопку «Отправить», вы даете Согласие на обработку
+                        персональных данных на условиях и для
+                        целей, определенных Политикой конфиденциальности.
+                    </div>
+                </label>
+            </div>
+            <button type="submit" class="button button_red feedback__btn">Отправить</button>
+        </form>
+    </div>
+</section>
+<script src="assets/js/vendors.119f6fbc546c99955953.js"></script><script src="assets/js/app.119f6fbc546c99955953.js"></script></body>
 </html>
