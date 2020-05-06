@@ -142,4 +142,72 @@ $('[data-fancybox]').fancybox({
     }
 });
 
+// input count
+$(function () {
 
+    (function quantityProducts() {
+        let $quantityArrowMinus = $(".input-count__btn_minus");
+        let $quantityArrowPlus = $(".input-count__btn_plus");
+        let $quantityNum = $(".input-count__input");
+
+        $quantityArrowMinus.click(quantityMinus);
+        $quantityArrowPlus.click(quantityPlus);
+
+        function quantityMinus() {
+            if ($quantityNum.val() > 1) {
+                $quantityNum.val(+$quantityNum.val() - 1);
+            }
+        }
+
+        function quantityPlus() {
+            $quantityNum.val(+$quantityNum.val() + 1);
+        }
+    })();
+
+});
+
+
+//scroll bar
+(function ($) {
+    $(window).on('load', function () {
+        $('el').mCustomScrollbar({
+            axis: 'y',              // вертикальный скролл
+            theme: 'rounded-dark',  // тема
+            scrollInertia: '330',   // продолжительность прокрутки, значение в миллисекундах
+            setHeight: 800,         // высота блока (переписывает CSS)
+            mouseWheel: {
+                deltaFactor: 300    // кол-во пикселей на одну прокрутку колёсика мыши
+            }
+        });
+    });
+})(jQuery);
+
+// tabs
+const tabs = document.querySelector(".tabs");
+//const activeBtns = document.querySelectorAll(".is-active");
+const tabsBtns = tabs.querySelectorAll(".tabs__btn");
+const tabsContents = tabs.querySelectorAll(".tabs__content");
+
+function displayCurrentTab(current) {
+  for (let i = 0; i < tabsContents.length; i++) {
+    tabsContents[i].style.display = (current === i) ? "block" : "none";
+  }
+}
+displayCurrentTab(0);
+
+
+tabs.addEventListener("click", event => {
+    for (let i = 0; i < tabsBtns.length; i++) {
+        tabsBtns[i].classList.remove("is-active");
+    }
+  if (event.target.className === "tabs__btn") {
+    for (let i = 0; i < tabsBtns.length; i++) {
+      if (event.target === tabsBtns[i]) {
+
+        displayCurrentTab(i);
+        event.target.classList.add('is-active');
+        break;
+      }
+    }
+  }
+});

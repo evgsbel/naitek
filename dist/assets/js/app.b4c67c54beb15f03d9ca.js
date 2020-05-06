@@ -200,13 +200,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fancyapps_fancybox__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fancyapps_fancybox__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var select2_dist_js_select2_min__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! select2/dist/js/select2.min */ "./node_modules/select2/dist/js/select2.min.js");
 /* harmony import */ var select2_dist_js_select2_min__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(select2_dist_js_select2_min__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./js/app */ "./src/js/app.js");
-/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_js_app__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/sass/app.sass */ "./src/assets/sass/app.sass");
-/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/sass/media.sass */ "./src/assets/sass/media.sass");
-/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min */ "./node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js");
+/* harmony import */ var malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(malihu_custom_scrollbar_plugin_jquery_mCustomScrollbar_concat_min__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./js/app */ "./src/js/app.js");
+/* harmony import */ var _js_app__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_js_app__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/sass/app.sass */ "./src/assets/sass/app.sass");
+/* harmony import */ var _assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_app_sass__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/sass/media.sass */ "./src/assets/sass/media.sass");
+/* harmony import */ var _assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_assets_sass_media_sass__WEBPACK_IMPORTED_MODULE_8__);
 // JS
+
 
 
 
@@ -226,7 +229,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function($) {// // $(() => {
+/* WEBPACK VAR INJECTION */(function($, jQuery) {// // $(() => {
 // //     $(window).on('load', function () {
 // //         $('.preloader__wrp').fadeOut();
 // //     });
@@ -343,10 +346,78 @@ $('[data-fancybox]').fancybox({
   btnTpl: {
     smallBtn: '<button type="button" data-fancybox-close class="fancybox-button fancybox-close-small modal-form__close" title="{{CLOSE}}">' + '<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"/></svg>' + "</button>"
   }
+}); // input count
+
+$(function () {
+  (function quantityProducts() {
+    var $quantityArrowMinus = $(".input-count__btn_minus");
+    var $quantityArrowPlus = $(".input-count__btn_plus");
+    var $quantityNum = $(".input-count__input");
+    $quantityArrowMinus.click(quantityMinus);
+    $quantityArrowPlus.click(quantityPlus);
+
+    function quantityMinus() {
+      if ($quantityNum.val() > 1) {
+        $quantityNum.val(+$quantityNum.val() - 1);
+      }
+    }
+
+    function quantityPlus() {
+      $quantityNum.val(+$quantityNum.val() + 1);
+    }
+  })();
+}); //scroll bar
+
+(function ($) {
+  $(window).on('load', function () {
+    $('el').mCustomScrollbar({
+      axis: 'y',
+      // вертикальный скролл
+      theme: 'rounded-dark',
+      // тема
+      scrollInertia: '330',
+      // продолжительность прокрутки, значение в миллисекундах
+      setHeight: 800,
+      // высота блока (переписывает CSS)
+      mouseWheel: {
+        deltaFactor: 300 // кол-во пикселей на одну прокрутку колёсика мыши
+
+      }
+    });
+  });
+})(jQuery); // tabs
+
+
+var tabs = document.querySelector(".tabs"); //const activeBtns = document.querySelectorAll(".is-active");
+
+var tabsBtns = tabs.querySelectorAll(".tabs__btn");
+var tabsContents = tabs.querySelectorAll(".tabs__content");
+
+function displayCurrentTab(current) {
+  for (var i = 0; i < tabsContents.length; i++) {
+    tabsContents[i].style.display = current === i ? "block" : "none";
+  }
+}
+
+displayCurrentTab(0);
+tabs.addEventListener("click", function (event) {
+  for (var i = 0; i < tabsBtns.length; i++) {
+    tabsBtns[i].classList.remove("is-active");
+  }
+
+  if (event.target.className === "tabs__btn") {
+    for (var _i = 0; _i < tabsBtns.length; _i++) {
+      if (event.target === tabsBtns[_i]) {
+        displayCurrentTab(_i);
+        event.target.classList.add('is-active');
+        break;
+      }
+    }
+  }
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.d0f8ed3d9b089e3155f6.js.map
+//# sourceMappingURL=app.b4c67c54beb15f03d9ca.js.map
