@@ -182,32 +182,51 @@ $(function () {
     });
 })(jQuery);
 
+// результаты поиска (всплывающее окно)
+
+$('.js-input-search').keyup(function () {
+    if (this.value.length > 2) {
+        $(document).click(function (event) { // скрываем
+            if ($(event.target).closest(".js-search-results").length) return;
+            $(".js-search-results").slideUp("fast");
+            //event.stopPropagation();
+        });
+        $(".js-search-results").slideDown("fast");
+        $(this).addClass('is-active');
+    } else {
+        // Если набрано меньше 2 символов, скрыть контейнер (CSS display:none;)
+        $(".js-search-results").slideUp("fast");
+        $(this).removeClass('is-active');
+    }
+})
+
 // tabs
-const tabs = document.querySelector(".tabs");
-//const activeBtns = document.querySelectorAll(".is-active");
-const tabsBtns = tabs.querySelectorAll(".tabs__btn");
-const tabsContents = tabs.querySelectorAll(".tabs__content");
+// const tabs = document.querySelector(".tabs");
+// const tabsBtn = tabs.querySelectorAll(".tabs__btn");
+// const tabsContents = tabs.querySelectorAll(".tabs__content");
+//
+// function displayCurrentTab(current) {
+//   for (let i = 0; i < tabsContents.length; i++) {
+//     tabsContents[i].style.display = (current === i) ? "block" : "none";
+//   }
+// }
+// displayCurrentTab(0);
+//
+//
+// tabs.addEventListener("click", event => {
+//     for (let i = 0; i < tabsBtn.length; i++) {
+//         tabsBtn[i].classList.remove("is-active");
+//     }
+//   if (event.target.className === "tabs__btn") {
+//     for (let i = 0; i < tabsBtn.length; i++) {
+//       if (event.target === tabsBtn[i]) {
+//
+//         displayCurrentTab(i);
+//         event.target.classList.add('is-active');
+//         break;
+//       }
+//     }
+//   }
+// });
 
-function displayCurrentTab(current) {
-  for (let i = 0; i < tabsContents.length; i++) {
-    tabsContents[i].style.display = (current === i) ? "block" : "none";
-  }
-}
-displayCurrentTab(0);
 
-
-tabs.addEventListener("click", event => {
-    for (let i = 0; i < tabsBtns.length; i++) {
-        tabsBtns[i].classList.remove("is-active");
-    }
-  if (event.target.className === "tabs__btn") {
-    for (let i = 0; i < tabsBtns.length; i++) {
-      if (event.target === tabsBtns[i]) {
-
-        displayCurrentTab(i);
-        event.target.classList.add('is-active');
-        break;
-      }
-    }
-  }
-});

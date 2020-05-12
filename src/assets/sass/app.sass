@@ -148,6 +148,46 @@ a
   border: 0
   li
     padding-left: 10px
+.search
+  &__form
+    position: relative
+  &__results
+    display: none
+    background-color: #fff
+    position: absolute
+    top: 60px
+    left: 0
+    width: 100%
+    padding: 25px
+    z-index: 10
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25)
+    border-radius: 3px
+    &-item
+      font-family: $light, Serif
+      width: 100%
+      color: #000
+      line-height: 1
+      margin-bottom: 15px
+      border-bottom: 1px solid #AFAFAF
+      padding-bottom: 15px
+    &-link
+      transition: $trans
+      line-height: 19px
+      font-size: 16px
+      display: block
+      &:hover
+        color: $red
+    &-img
+      border: 1px solid #D5D5D5
+      border-radius: 3px
+      max-height: 54px
+      max-width: 54px
+    &-price
+      text-align: right
+      color: #000
+      font-family: $medium, serif
+    &-words
+      color: #0A4A83
 
 // Top nav
 .top-nav
@@ -930,7 +970,6 @@ a
     &:hover
        animation: none
        box-shadow: 0 0  0 2px rgba(0, 74, 131, 0.4)
-
 
 
 .pagination
