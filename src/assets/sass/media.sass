@@ -26,6 +26,14 @@
   .footer
     &__akticom
       margin-top: 30px
+  .product
+    &__info
+      width: 51%
+      margin-left: 10px
+    &__img
+      width: 47%
+      img
+        width: 100%
 @media (max-width: 1199.98px)
   .news
     &__active-info
@@ -76,7 +84,20 @@
   .feedback
     &__input
       width: 32%
+  .product
+    &__info
+      width: 100%
+      margin-left: 0
+    &__img
+      width: 100%
+      img
+        width: 100%
 @media (max-width: 991.98px)
+  .title
+    height: auto
+  .breadcrumbs
+    &__wrapper
+      flex-wrap: wrap
   .top-bar
     &__logo
       margin: 0 auto 15px
@@ -219,6 +240,46 @@
   .modal-form
     &__title
       height: auto
+  .product
+    &__info
+      flex-wrap: wrap
+      &-item
+        width: 100%
+    &__details
+      width: 100%
+      margin-top: 30px
+      border-top: 1px solid #AFAFAF
+      padding-top: 20px
+    &__stock
+      width: 100%
+    &__count
+      flex-wrap: wrap
+      justify-content: center
+      &-input input
+        margin-top: 20px
+  .input-count__btn
+    top: 45%
+  .news-inner
+    &__img
+      margin-bottom: 30px
+  .news-navigation
+    &__wrapper
+      justify-content: center
+    &__link
+      margin-bottom: 20px
+      &_top
+        order: 1
+  .contacts
+    &__info
+      max-width: 100%
+      flex: 0 0 100%
+    &__map
+      max-width: 100%
+      width: 100%
+      flex: 0 0 100%
+
+
+
 
 
 
