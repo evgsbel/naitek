@@ -9096,6 +9096,13 @@ a {
     width: 100%;
     height: 70px;
     text-align: center; }
+  .header__search {
+    max-width: 45%; }
+  .header__cart {
+    flex: 0 0 28%;
+    max-width: 28%; }
+  .top-nav__link {
+    font-size: 16px; }
   .footer__akticom {
     margin-top: 30px; }
   .product__info {
@@ -9107,6 +9114,11 @@ a {
       width: 100%; } }
 
 @media (max-width: 1199.98px) {
+  .header__search {
+    max-width: 100%; }
+  .header__cart {
+    flex: auto;
+    max-width: 84%; }
   .news__active-info {
     width: 70%; }
   .top-contacts {
@@ -9314,4 +9326,4 @@ a {
     flex: 0 0 100%; } }
 
 
-/*# sourceMappingURL=app.f5f882506a18ec5de7c2.css.map*/
+/*# sourceMappingURL=app.fdd32a02c53100e775b8.css.map*/
