@@ -402,37 +402,37 @@ $('.js-input-search').keyup(function () {
     $(".js-search-results").slideUp("fast");
     $(this).removeClass('is-active');
   }
-}); // tabs
-// const tabs = document.querySelector(".tabs");
-// const tabsBtn = tabs.querySelectorAll(".tabs__btn");
-// const tabsContents = tabs.querySelectorAll(".tabs__content");
-//
-// function displayCurrentTab(current) {
-//   for (let i = 0; i < tabsContents.length; i++) {
-//     tabsContents[i].style.display = (current === i) ? "block" : "none";
-//   }
-// }
-// displayCurrentTab(0);
-//
-//
-// tabs.addEventListener("click", event => {
-//     for (let i = 0; i < tabsBtn.length; i++) {
-//         tabsBtn[i].classList.remove("is-active");
-//     }
-//   if (event.target.className === "tabs__btn") {
-//     for (let i = 0; i < tabsBtn.length; i++) {
-//       if (event.target === tabsBtn[i]) {
-//
-//         displayCurrentTab(i);
-//         event.target.classList.add('is-active');
-//         break;
-//       }
-//     }
-//   }
-// });
+});
+tabs;
+var tabs = document.querySelector(".tabs");
+var tabsBtn = tabs.querySelectorAll(".tabs__btn");
+var tabsContents = tabs.querySelectorAll(".tabs__content");
+
+function displayCurrentTab(current) {
+  for (var i = 0; i < tabsContents.length; i++) {
+    tabsContents[i].style.display = current === i ? "block" : "none";
+  }
+}
+
+displayCurrentTab(0);
+tabs.addEventListener("click", function (event) {
+  for (var i = 0; i < tabsBtn.length; i++) {
+    tabsBtn[i].classList.remove("is-active");
+  }
+
+  if (event.target.className === "tabs__btn") {
+    for (var _i = 0; _i < tabsBtn.length; _i++) {
+      if (event.target === tabsBtn[_i]) {
+        displayCurrentTab(_i);
+        event.target.classList.add('is-active');
+        break;
+      }
+    }
+  }
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.8d042e801536eb1913a5.js.map
+//# sourceMappingURL=app.dbf307b2a377ccee9076.js.map

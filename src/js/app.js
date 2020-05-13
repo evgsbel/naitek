@@ -200,33 +200,33 @@ $('.js-input-search').keyup(function () {
     }
 })
 
-// tabs
-// const tabs = document.querySelector(".tabs");
-// const tabsBtn = tabs.querySelectorAll(".tabs__btn");
-// const tabsContents = tabs.querySelectorAll(".tabs__content");
-//
-// function displayCurrentTab(current) {
-//   for (let i = 0; i < tabsContents.length; i++) {
-//     tabsContents[i].style.display = (current === i) ? "block" : "none";
-//   }
-// }
-// displayCurrentTab(0);
-//
-//
-// tabs.addEventListener("click", event => {
-//     for (let i = 0; i < tabsBtn.length; i++) {
-//         tabsBtn[i].classList.remove("is-active");
-//     }
-//   if (event.target.className === "tabs__btn") {
-//     for (let i = 0; i < tabsBtn.length; i++) {
-//       if (event.target === tabsBtn[i]) {
-//
-//         displayCurrentTab(i);
-//         event.target.classList.add('is-active');
-//         break;
-//       }
-//     }
-//   }
-// });
+tabs
+const tabs = document.querySelector(".tabs");
+const tabsBtn = tabs.querySelectorAll(".tabs__btn");
+const tabsContents = tabs.querySelectorAll(".tabs__content");
+
+function displayCurrentTab(current) {
+  for (let i = 0; i < tabsContents.length; i++) {
+    tabsContents[i].style.display = (current === i) ? "block" : "none";
+  }
+}
+displayCurrentTab(0);
+
+
+tabs.addEventListener("click", event => {
+    for (let i = 0; i < tabsBtn.length; i++) {
+        tabsBtn[i].classList.remove("is-active");
+    }
+  if (event.target.className === "tabs__btn") {
+    for (let i = 0; i < tabsBtn.length; i++) {
+      if (event.target === tabsBtn[i]) {
+
+        displayCurrentTab(i);
+        event.target.classList.add('is-active');
+        break;
+      }
+    }
+  }
+});
 
 
