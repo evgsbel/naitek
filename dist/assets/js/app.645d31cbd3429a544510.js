@@ -402,11 +402,11 @@ $('.js-input-search').keyup(function () {
     $(".js-search-results").slideUp("fast");
     $(this).removeClass('is-active');
   }
-});
-tabs;
+}); //tabs
+
 var tabs = document.querySelector(".tabs");
-var tabsBtn = tabs.querySelectorAll(".tabs__btn");
-var tabsContents = tabs.querySelectorAll(".tabs__content");
+var tabsBtn = document.querySelectorAll(".tabs__btn");
+var tabsContents = document.querySelectorAll(".tabs__content");
 
 function displayCurrentTab(current) {
   for (var i = 0; i < tabsContents.length; i++) {
@@ -415,24 +415,29 @@ function displayCurrentTab(current) {
 }
 
 displayCurrentTab(0);
-tabs.addEventListener("click", function (event) {
-  for (var i = 0; i < tabsBtn.length; i++) {
-    tabsBtn[i].classList.remove("is-active");
-  }
 
-  if (event.target.className === "tabs__btn") {
-    for (var _i = 0; _i < tabsBtn.length; _i++) {
-      if (event.target === tabsBtn[_i]) {
-        displayCurrentTab(_i);
-        event.target.classList.add('is-active');
-        break;
+if (null !== tabs) {
+  tabs.addEventListener("click", function (event) {
+    if (event.target.className === "tabs__btn") {
+      for (var i = 0; i < tabsBtn.length; i++) {
+        tabsBtn[i].classList.remove("is-active");
       }
     }
-  }
-});
+
+    if (event.target.className === "tabs__btn") {
+      for (var _i = 0; _i < tabsBtn.length; _i++) {
+        if (event.target === tabsBtn[_i]) {
+          displayCurrentTab(_i);
+          event.target.classList.add('is-active');
+          break;
+        }
+      }
+    }
+  });
+}
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.fdd32a02c53100e775b8.js.map
+//# sourceMappingURL=app.645d31cbd3429a544510.js.map

@@ -169,7 +169,9 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: '../img/[name].[ext]',
+                        name: '[name].[ext]',
+                        outputPath: `${PATHS.assets}img`,
+                        publicPath: '../img'
                     },
                 }]
             },
@@ -178,7 +180,9 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: '../fonts/[name].[ext]',
+                        name: '[name].[ext]',
+                        outputPath: `${PATHS.assets}fonts`,
+                        publicPath: '../fonts'
                     },
                 }]
             },
