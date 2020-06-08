@@ -9310,6 +9310,34 @@ a {
   left: 15px;
   text-transform: none; }
 
+.no-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 65vh; }
+  .no-found_img {
+    position: relative; }
+    .no-found_img:before {
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg width='1222' height='109' viewBox='0 0 1222 109' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1222 5H-3.80278e-05M1222 54.3737H-3.80278e-05M1222 103.747H-3.80278e-05' stroke='%23E5E5E5' stroke-width='9.87475' stroke-dasharray='9.87 49.37'/%3E%3C/svg%3E%0A");
+      max-width: 100%;
+      width: 1222px;
+      z-index: -1;
+      background-repeat: no-repeat;
+      height: 109px;
+      position: absolute;
+      top: 32%;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+  .no-found_title {
+    font-size: 30px; }
+  .no-found a {
+    transition: 0.3s all ease-in-out;
+    text-decoration: underline; }
+    .no-found a:hover {
+      text-decoration: none; }
+
 @media (max-width: 1366.98px) {
   .container {
     padding: 0 30px; }
@@ -9561,4 +9589,4 @@ a {
     flex: 0 0 100%; } }
 
 
-/*# sourceMappingURL=app.509dab0e5be84fc77943.css.map*/
+/*# sourceMappingURL=app.12b7f8b7e7602c4f0826.css.map*/
