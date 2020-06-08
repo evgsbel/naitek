@@ -435,9 +435,20 @@ if (null !== tabs) {
     }
   });
 }
+
+var inputs = document.querySelectorAll('.inputfile');
+Array.prototype.forEach.call(inputs, function (input) {
+  var label = input.nextElementSibling,
+      labelVal = label.innerHTML;
+  input.addEventListener('change', function (e) {
+    var fileName = '';
+    if (this.files && this.files.length > 1) fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);else fileName = e.target.value.split('\\').pop();
+    if (fileName) label.querySelector('span').innerHTML = fileName + this.size;else label.innerHTML = labelVal;
+  });
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.645d31cbd3429a544510.js.map
+//# sourceMappingURL=app.509dab0e5be84fc77943.js.map
