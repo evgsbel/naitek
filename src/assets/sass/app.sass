@@ -1552,17 +1552,26 @@ a
       text-transform: uppercase
       font-family: $bold, serif
   &__file
-    margin-top: 70px
     margin-bottom: 70px
     position: relative
-  &__file-name
-    position: absolute
+    &_info
+      color: $black
+      text-transform: none
+      span
+       margin: 0 15px
+    &_delete
+      margin-left: 25px
+      text-decoration: underline
+      border: 0
+      background-color: transparent
+      &:hover
+        text-decoration: none
+  &__confidencial
+    margin: 70px 0
+    font-family: $regular, Serif
     color: $black
-    font-family: $light
-    top: -30px
-    left: 15px
-    text-transform: none
 
+// 404
 .no-found
   display: flex
   flex-direction: column

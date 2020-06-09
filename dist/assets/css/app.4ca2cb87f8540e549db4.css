@@ -7750,41 +7750,45 @@ a.text-dark:hover, a.text-dark:focus {
       width: 9px;
       height: 9px; }
 
-.inputfile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-  transition: 0.3s all ease-in-out; }
-  .inputfile + label {
-    color: #fff;
-    font-size: 14px;
-    letter-spacing: 0.05em;
-    cursor: pointer;
+.file-upload input[type="file"] {
+  display: none; }
+
+.file-upload {
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  display: flex;
+  width: 263px;
+  font-family: "gt_eesti_pro_displaybold", serif;
+  text-transform: uppercase;
+  height: 45px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #D3122B;
+  border-radius: 3px;
+  transition: 0.3s all ease-in-out;
+  position: relative; }
+  .file-upload:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15); }
+  .file-upload label {
     display: flex;
-    width: 263px;
-    font-family: "gt_eesti_pro_displaybold", serif;
-    text-transform: uppercase;
-    height: 45px;
-    max-width: 100%;
     justify-content: center;
     align-items: center;
-    background: #D3122B;
-    border-radius: 3px;
-    transition: 0.3s all ease-in-out; }
-    .inputfile + label svg {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer; }
+    .file-upload label span {
+      font-family: "gt_eesti_pro_displaybold", serif; }
+    .file-upload label svg {
       margin-right: 18px; }
-  .inputfile:focus + label {
-    background-color: red; }
-  .inputfile:focus + label {
-    outline: 1px dotted #000;
-    outline: -webkit-focus-ring-color auto 5px; }
-  .inputfile + label:hover {
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15); }
-  .inputfile + label * {
-    pointer-events: none; }
+
+.preview-img {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 5px; }
 
 @keyframes pulse {
   0% {
@@ -9298,17 +9302,25 @@ a {
     font-family: "gt_eesti_pro_displaybold", serif; }
 
 .order__file {
-  margin-top: 70px;
   margin-bottom: 70px;
   position: relative; }
+  .order__file_info {
+    color: #2A2A2A;
+    text-transform: none; }
+    .order__file_info span {
+      margin: 0 15px; }
+  .order__file_delete {
+    margin-left: 25px;
+    text-decoration: underline;
+    border: 0;
+    background-color: transparent; }
+    .order__file_delete:hover {
+      text-decoration: none; }
 
-.order__file-name {
-  position: absolute;
-  color: #2A2A2A;
-  font-family: "gt_eesti_pro_displaylight";
-  top: -30px;
-  left: 15px;
-  text-transform: none; }
+.order__confidencial {
+  margin: 70px 0;
+  font-family: "gt_eesti_pro_displayregular", Serif;
+  color: #2A2A2A; }
 
 .no-found {
   display: flex;
@@ -9589,4 +9601,4 @@ a {
     flex: 0 0 100%; } }
 
 
-/*# sourceMappingURL=app.12b7f8b7e7602c4f0826.css.map*/
+/*# sourceMappingURL=app.4ca2cb87f8540e549db4.css.map*/
