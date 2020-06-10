@@ -331,6 +331,7 @@ $(() => {
     function checkWidth() {
         let windowWidth = $('body').innerWidth()
         if (windowWidth > 1025) {
+            //remove scrollbar on mobile
             $(function () {
                 var topPos = $('.js-order-scroll').offset().top;
                 $(window).scroll(function () {
@@ -347,9 +348,11 @@ $(() => {
                 });
             });
         }
-        checkWidth();
-        $(window).resize(function () {
-            checkWidth(); // проверит при изменении размера окна клиента
-        });
     }
-})
+
+    checkWidth();
+    $(window).resize(function () {
+        checkWidth(); // проверит при изменении размера окна клиента
+    });
+});
+

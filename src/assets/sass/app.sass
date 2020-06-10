@@ -64,7 +64,7 @@ a
     color: inherit
     text-decoration: none
 .rub
-  font-family: $rouble
+  font-family: $rouble !important
 .bg-white
   background-color: #fff
 
@@ -1099,7 +1099,7 @@ a
       font-size: 20px
       span
         display: inline-block
-        margin-left: 50px
+        margin-left: 5px
     &-price
       font-size: 30px
       font-family: $bold, serif
@@ -1369,8 +1369,8 @@ a
 
 .contacts
   &__info
-    flex: 0 0 50%
-    max-width: 50%
+    flex: 0 0 40%
+    max-width: 40%
   &__item
     font-size: 18px
     margin-bottom: 20px
@@ -1389,8 +1389,8 @@ a
   &__subtitle
     margin: 40px 0
   &__map
-    flex: 0 0 50%
-    max-width: 50%
+    flex: 0 0 60%
+    max-width: 60%
   &__subtitle
     font-family: $bold, serif
     font-size: 30px
@@ -1453,11 +1453,11 @@ a
     max-width: 100%
     transition: $trans
     justify-content: space-around
-    svg
-      stroke: #2A2A2A
-      transition: $trans
-    &:hover
-      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15)
+    &.button_grey
+      svg
+        stroke: #2A2A2A
+        transition: $trans
+    &.button_red
       svg
         stroke: #fff
   &__subtitle
@@ -1467,7 +1467,7 @@ a
     line-height: 35px
   &__result
     &_wrapper
-      height: 50vh
+      height: 70vh
       display: flex
       flex-direction: column
       justify-content: center
@@ -1564,6 +1564,10 @@ a
       width: 100%
       text-transform: uppercase
       font-family: $bold, serif
+      transition: .3s all ease-in-out
+      &:hover
+        background-color: $red
+        color: #fff
   &__file
     margin-bottom: 70px
     position: relative
@@ -1583,6 +1587,10 @@ a
     margin: 70px 0
     font-family: $regular, Serif
     color: $black
+    a
+      text-decoration: underline
+      &:hover
+        text-decoration: none
 .in-fix
   position: fixed
 // 404

@@ -536,6 +536,7 @@ $(function () {
     var windowWidth = $('body').innerWidth();
 
     if (windowWidth > 1025) {
+      //remove scrollbar on mobile
       $(function () {
         var topPos = $('.js-order-scroll').offset().top;
         $(window).scroll(function () {
@@ -556,16 +557,16 @@ $(function () {
         });
       });
     }
-
-    checkWidth();
-    $(window).resize(function () {
-      checkWidth(); // проверит при изменении размера окна клиента
-    });
   }
+
+  checkWidth();
+  $(window).resize(function () {
+    checkWidth(); // проверит при изменении размера окна клиента
+  });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.431b8c7a576aad62d412.js.map
+//# sourceMappingURL=app.3fa8c5f93c74f81f46e2.js.map

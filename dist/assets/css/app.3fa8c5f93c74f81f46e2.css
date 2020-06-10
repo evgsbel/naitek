@@ -7693,8 +7693,7 @@ a.text-dark:hover, a.text-dark:focus {
   .button_grey {
     background-color: #D6D6D6; }
     .button_grey:hover {
-      background-color: #D3122B;
-      color: #fff; }
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15); }
 
 .slider-arrow {
   position: absolute;
@@ -7835,7 +7834,7 @@ a {
     text-decoration: none; }
 
 .rub {
-  font-family: "rouble"; }
+  font-family: "rouble" !important; }
 
 .bg-white {
   background-color: #fff; }
@@ -8843,7 +8842,7 @@ a {
     font-size: 20px; }
     .catalog__info-txt span {
       display: inline-block;
-      margin-left: 50px; }
+      margin-left: 5px; }
   .catalog__info-price {
     font-size: 30px;
     font-family: "gt_eesti_pro_displaybold", serif; }
@@ -9108,8 +9107,8 @@ a {
       margin-left: 20px; }
 
 .contacts__info {
-  flex: 0 0 50%;
-  max-width: 50%; }
+  flex: 0 0 40%;
+  max-width: 40%; }
 
 .contacts__item {
   font-size: 18px;
@@ -9131,8 +9130,8 @@ a {
   margin: 40px 0; }
 
 .contacts__map {
-  flex: 0 0 50%;
-  max-width: 50%; }
+  flex: 0 0 60%;
+  max-width: 60%; }
 
 .contacts__subtitle {
   font-family: "gt_eesti_pro_displaybold", serif;
@@ -9198,13 +9197,11 @@ a {
   max-width: 100%;
   transition: 0.3s all ease-in-out;
   justify-content: space-around; }
-  .cart__btn svg {
+  .cart__btn.button_grey svg {
     stroke: #2A2A2A;
     transition: 0.3s all ease-in-out; }
-  .cart__btn:hover {
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15); }
-    .cart__btn:hover svg {
-      stroke: #fff; }
+  .cart__btn.button_red svg {
+    stroke: #fff; }
 
 .cart__subtitle {
   font-size: 30px;
@@ -9213,7 +9210,7 @@ a {
   line-height: 35px; }
 
 .cart__result_wrapper {
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9312,7 +9309,11 @@ a {
   .order__info_btn {
     width: 100%;
     text-transform: uppercase;
-    font-family: "gt_eesti_pro_displaybold", serif; }
+    font-family: "gt_eesti_pro_displaybold", serif;
+    transition: .3s all ease-in-out; }
+    .order__info_btn:hover {
+      background-color: #D3122B;
+      color: #fff; }
 
 .order__file {
   margin-bottom: 70px;
@@ -9334,6 +9335,10 @@ a {
   margin: 70px 0;
   font-family: "gt_eesti_pro_displayregular", Serif;
   color: #2A2A2A; }
+  .order__confidencial a {
+    text-decoration: underline; }
+    .order__confidencial a:hover {
+      text-decoration: none; }
 
 .in-fix {
   position: fixed; }
@@ -9537,7 +9542,7 @@ a {
 @media (max-width: 991.98px) {
   .title {
     height: auto;
-    font-size: 28px; }
+    font-size: 20px; }
   .breadcrumbs__wrapper {
     flex-wrap: wrap; }
   .top-bar__logo {
@@ -9573,8 +9578,13 @@ a {
     right: 30px; } }
 
 @media (max-width: 767.98px) {
-  .title {
-    font-size: 35px; }
+  .title, .feedback__title {
+    font-size: 25px;
+    background-size: auto; }
+  .contacts__subtitle {
+    max-width: 100%; }
+  .catalog__info {
+    padding-left: 20px; }
   .banner__title {
     font-size: 35px;
     line-height: 1;
@@ -9604,6 +9614,9 @@ a {
     max-width: 50%;
     margin-bottom: 30px; }
   .footer__copyright-text {
+    padding-left: 0; }
+  .footer__akticom {
+    justify-content: flex-start;
     padding-left: 0; }
   .top-bar {
     padding: 0; }
@@ -9740,4 +9753,4 @@ a {
     width: 100%; } }
 
 
-/*# sourceMappingURL=app.431b8c7a576aad62d412.css.map*/
+/*# sourceMappingURL=app.3fa8c5f93c74f81f46e2.css.map*/

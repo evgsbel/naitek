@@ -109,7 +109,7 @@
 @media (max-width: 991.98px)
   .title
     height: auto
-    font-size: 28px
+    font-size: 20px
   .breadcrumbs
     &__wrapper
       flex-wrap: wrap
@@ -153,8 +153,13 @@
     position: absolute
     right: 30px
 @media (max-width: 767.98px)
-  .title
-    font-size: 35px
+  .title, .feedback__title
+    font-size: 25px
+    background-size: auto
+  .contacts__subtitle
+    max-width: 100%
+  .catalog__info
+    padding-left: 20px
   .banner
     &__title
       font-size: 35px
@@ -192,6 +197,9 @@
       margin-bottom: 30px
     &__copyright-text
       padding-left: 0
+  .footer__akticom
+    justify-content: flex-start
+    padding-left: 0
   //header
   .top-bar
     padding: 0

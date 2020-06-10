@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Naitek - Оформление заказа</title>
-<link href="assets/css/vendors.431b8c7a576aad62d412.css" rel="stylesheet"><link href="assets/css/app.431b8c7a576aad62d412.css" rel="stylesheet"></head>
+<link href="assets/css/vendors.3fa8c5f93c74f81f46e2.css" rel="stylesheet"><link href="assets/css/app.3fa8c5f93c74f81f46e2.css" rel="stylesheet"></head>
 <body>
 <div class="hide-svg">
     <svg xmlns="http://www.w3.org/2000/svg">
@@ -405,7 +405,7 @@
             </ul>
         </div>
     </div>
-    <!--Only mobile-->
+    <!/--Only mobile-->
     <header class="header">
         <div class="container">
             <div class="row header__wrapper">
@@ -427,7 +427,7 @@
                 </div>
                 <div class="header__cart col-md-10 col-xl-3 d-flex">
                     <div class="header__cart-info">
-                        <div class="header__cart-price">В корзине товаров на <span>271 000 ₽</span></div>
+                        <div class="header__cart-price">В корзине товаров на <span>271 000 <span class="rub">p</span></span></div>
                         <a href="" class="header__cart-link">в корзину</a>
                     </div>
                     <button class="button button_service button_service_cart header__cart-btn">
@@ -544,14 +544,106 @@
             <a href="" class="header__btn col-md-3 col-xl-2">Каталог продукции</a>
             <div class="search header__search col-md-9 col-xl-6">
                 <form action="" class="search__form form">
-                    <input type="text" class="form__input search__input header__input"
+                    <input type="text" class="form__input search__input header__input js-input-search"
                            placeholder="Введите наименование или артикул...">
                     <input type="submit" value="" class="search__submit header__submit">
+                    <div class="search__results js-search-results">
+                        <div class="search__results-scroll-content mCustomScrollbar js-scrollbar"
+                             data-mcs-theme="3d-dark">
+                            <div class="d-flex search__results-item">
+                                <img src="./assets/img/s-01.png" alt="" class="search__results-img">
+                                <a href="" class="search__results-link search__results-link col-xl-9">
+                                    <div class="search__results-properties"><span
+                                            class="search__results-words">Медь</span>
+                                        восстановленная, гранулы 0.1 до 0.5мм (5 x
+                                        10г)
+                                    </div>
+                                    <div class="search__results-properties"> Каталожный номер: B1012 4 680 руб.</div>
+                                    <div class="search__results-properties"> Эквивалентные детали OEM: SC0155, SC0155,
+                                        SC0155
+                                    </div>
+                                </a>
+                                <div class="search__results-price col-xl-2 pr-0">4 680 <span class="rub">p</span></div>
+                            </div>
+                            <div class="d-flex search__results-item">
+                                <img src="./assets/img/s-01.png" alt="" class="search__results-img">
+                                <a href="" class="search__results-link search__results-link col-xl-9">
+                                    <div class="search__results-properties">Полный набор гранулированного вольфрама (470
+                                        г)
+                                        +25 нержавеющих <span class="search__results-words">мед</span>ных сеток,
+                                        12.01-0045
+                                    </div>
+                                    <div class="search__results-properties">Каталожный номер: B1012</div>
+                                    <div class="search__results-properties">Эквивалентные детали OEM: SC0155, SC0155,
+                                        SC0155
+                                    </div>
+                                </a>
+                                <div class="search__results-price col-xl-2 pr-0">1 030 <span class="rub">p</span></div>
+                            </div>
+                            <div class="d-flex search__results-item">
+                                <img src="./assets/img/s-01.png" alt="" class="search__results-img">
+                                <a href="" class="search__results-link col-xl-9">
+                                    <div class="search__results-properties">Оксид <span
+                                            class="search__results-words">мед</span>и, тонкая проволока 4 x 0.5мм (100г)
+                                    </div>
+                                    <div class="search__results-properties">Каталожный номер: B1012</div>
+                                    <div class="search__results-properties">Эквивалентные детали OEM: SC0155, SC0155,
+                                        SC0155
+                                    </div>
+                                </a>
+                                <div class="search__results-price col-xl-2 pr-0">930 <span class="rub">p</span></div>
+                            </div>
+                            <div class="d-flex search__results-item">
+                                <img src="./assets/img/s-01.png" alt="" class="search__results-img">
+                                <a href="" class="search__results-link search__results-link col-xl-9">
+                                    <div class="search__results-properties"><span
+                                            class="search__results-words">Медь</span>
+                                        восстановленная, гранулы 0.1 до 0.5мм (5 x
+                                        10г)
+                                    </div>
+                                    <div class="search__results-properties"> Каталожный номер: B1012 4 680 руб.</div>
+                                    <div class="search__results-properties"> Эквивалентные детали OEM: SC0155, SC0155,
+                                        SC0155
+                                    </div>
+                                </a>
+                                <div class="search__results-price col-xl-2 pr-0">4 680 <span class="rub">p</span></div>
+                            </div>
+                            <div class="d-flex search__results-item">
+                                <img src="./assets/img/s-01.png" alt="" class="search__results-img">
+                                <a href="" class="search__results-link search__results-link col-xl-9">
+                                    <div class="search__results-properties">Полный набор гранулированного вольфрама (470
+                                        г)
+                                        +25 нержавеющих <span class="search__results-words">мед</span>ных сеток,
+                                        12.01-0045
+                                    </div>
+                                    <div class="search__results-properties">Каталожный номер: B1012</div>
+                                    <div class="search__results-properties">Эквивалентные детали OEM: SC0155, SC0155,
+                                        SC0155
+                                    </div>
+                                </a>
+                                <div class="search__results-price col-xl-2 pr-0">1 030 <span class="rub">p</span></div>
+                            </div>
+                            <div class="d-flex search__results-item">
+                                <img src="./assets/img/s-01.png" alt="" class="search__results-img">
+                                <a href="" class="search__results-link col-xl-9">
+                                    <div class="search__results-properties">Оксид <span
+                                            class="search__results-words">мед</span>и, тонкая проволока 4 x 0.5мм (100г)
+                                    </div>
+                                    <div class="search__results-properties">Каталожный номер: B1012</div>
+                                    <div class="search__results-properties">Эквивалентные детали OEM: SC0155, SC0155,
+                                        SC0155
+                                    </div>
+                                </a>
+                                <div class="search__results-price col-xl-2 pr-0">930 <span class="rub">p</span></div>
+                            </div>
+                        </div>
+                        <a href="" class="search__results-linkall">Показать все результаты поиска</a>
+                    </div>
                 </form>
             </div>
             <div class="currency header__currency">
                 <form action="" class="currency__form form">
-                    <select name="" id="select-currency-fixed" class="js-select-state  header__select">
+                    <select name="" id="select-currency" class="js-select-state  header__select">
                         <option value="rrub">RUB</option>
                         <option value="ggbr">GBR</option>
                     </select>
@@ -559,13 +651,12 @@
             </div>
             <div class="header__cart col-md-10 col-xl-3 d-flex">
                 <div class="header__cart-info">
-                    <div class="header__cart-price">В корзине товаров на <span>271 000 <span class="rub">p</span></span>
-                    </div>
+                    <div class="header__cart-price">В корзине товаров на <span>271 000 <span class="rub">p</span></span></div>
                     <a href="" class="header__cart-link">в корзину</a>
                 </div>
-                <button class="button button_service button_service_cart header__cart-btn">
+                <a href="#cart" data-fancybox="" class="button button_service button_service_cart header__cart-btn">
                     <span class="top-counters header__counters">12</span>
-                </button>
+                </a>
             </div>
         </div>
     </div>
@@ -784,7 +875,6 @@
                     <a href="" class="pagination__number">3</a>
                     <a href="" class="pagination__number pagination__number_active">4</a>
                     <a href="" class="pagination__number">5</a>
-                    <a href="" class="pagination__number">6</a>
                     <a href="" class="pagination__number">...</a>
                     <a href="" class="pagination__number">73</a>
                 </div>
@@ -992,5 +1082,5 @@
         </div>
     </div>
 </section>
-<script src="assets/js/vendors.431b8c7a576aad62d412.js"></script><script src="assets/js/app.431b8c7a576aad62d412.js"></script></body>
+<script src="assets/js/vendors.3fa8c5f93c74f81f46e2.js"></script><script src="assets/js/app.3fa8c5f93c74f81f46e2.js"></script></body>
 </html>
