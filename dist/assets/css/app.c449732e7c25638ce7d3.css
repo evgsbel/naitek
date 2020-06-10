@@ -9499,7 +9499,8 @@ a {
 
 @media (max-width: 991.98px) {
   .title {
-    height: auto; }
+    height: auto;
+    font-size: 28px; }
   .breadcrumbs__wrapper {
     flex-wrap: wrap; }
   .top-bar__logo {
@@ -9655,4 +9656,4 @@ a {
     flex: 0 0 100%; } }
 
 
-/*# sourceMappingURL=app.38a466900aeccef569ec.css.map*/
+/*# sourceMappingURL=app.c449732e7c25638ce7d3.css.map*/
