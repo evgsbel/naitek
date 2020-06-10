@@ -9399,6 +9399,43 @@ a {
         margin-right: 20px;
         display: block; }
 
+.cart-mobile {
+  display: none; }
+  .cart-mobile__item {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    margin-bottom: 20px; }
+  .cart-mobile__img {
+    text-align: center;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    margin-bottom: 15px; }
+    .cart-mobile__img img {
+      width: 100%; }
+  .cart-mobile__name {
+    max-width: 68%;
+    line-height: 19px;
+    color: #000; }
+    .cart-mobile__name span {
+      display: block; }
+  .cart-mobile__hr {
+    padding-bottom: 18px;
+    border-bottom: 1px solid #E1E1E1;
+    margin-bottom: 10px; }
+  .cart-mobile__ttl {
+    display: block;
+    font-size: 14px;
+    font-family: "gt_eesti_pro_displaybold", serif; }
+  .cart-mobile__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 45px;
+    font-family: "gt_eesti_pro_displaybold", serif;
+    margin-top: 20px; }
+
 @media (max-width: 1366.98px) {
   .container {
     padding: 0 30px; }
@@ -9530,7 +9567,10 @@ a {
     width: 32%; }
   .catalog__info-title {
     height: auto;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .cart__item_del {
+    position: absolute;
+    right: 30px; } }
 
 @media (max-width: 767.98px) {
   .title {
@@ -9653,7 +9693,51 @@ a {
   .contacts__map {
     max-width: 100%;
     width: 100%;
-    flex: 0 0 100%; } }
+    flex: 0 0 100%; }
+  .cart {
+    display: none; }
+    .cart__item_del {
+      position: relative;
+      right: auto; }
+    .cart__btn {
+      width: 100%;
+      margin-bottom: 20px; }
+      .cart__btn.button_red {
+        justify-content: center; }
+        .cart__btn.button_red svg {
+          margin-left: 15px;
+          stroke: #fff; }
+      .cart__btn.button_grey svg {
+        display: none; }
+    .cart__total_val {
+      display: block;
+      width: 100%;
+      text-align: right;
+      margin-top: 10px; }
+  .cart-mobile {
+    display: block; }
+  .modal-cart__header {
+    display: none; }
+  .modal-cart__wrapper {
+    border-bottom: 1px solid #CFCFCF;
+    padding-bottom: 20px; }
+  .modal-cart__item {
+    width: 50%; }
+    .modal-cart__item_name {
+      width: 100%; }
+    .modal-cart__item_count .product__count-input {
+      margin: 0; }
+    .modal-cart__item_price {
+      text-align: right;
+      margin: 20px 0 0; }
+  .modal-cart__total {
+    border: 0;
+    margin: 0 0 30px; }
+    .modal-cart__total_price {
+      margin-right: 0; }
+  .modal-cart__btn {
+    margin: 15px 0;
+    width: 100%; } }
 
 
-/*# sourceMappingURL=app.c449732e7c25638ce7d3.css.map*/
+/*# sourceMappingURL=app.431b8c7a576aad62d412.css.map*/

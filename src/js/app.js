@@ -256,7 +256,7 @@ $('#file-del').on('click', function () {
     // document.getElementById('file-del').innerHTML = "";
     // document.getElementById('preview1').innerHTML = "";
 });
-
+$(() => {
 function getFileParam() {
     try {
         var file = document.getElementById('uploaded-file1').files[0];
@@ -323,6 +323,8 @@ function getFileParam() {
 
 let file = document.getElementById('uploaded-file1')
 file.onchange = getFileParam;
+})
+
 
 //order scroll
 $(() => {

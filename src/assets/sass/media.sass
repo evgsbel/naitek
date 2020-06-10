@@ -149,6 +149,9 @@
       &-title
         height: auto
         margin-bottom: 20px
+  .cart__item_del
+    position: absolute
+    right: 30px
 @media (max-width: 767.98px)
   .title
     font-size: 35px
@@ -292,6 +295,54 @@
       max-width: 100%
       width: 100%
       flex: 0 0 100%
+  .cart
+    display: none
+    &__item
+      &_del
+        position: relative
+        right: auto
+    &__btn
+      width: 100%
+      margin-bottom: 20px
+      &.button_red
+        justify-content: center
+        svg
+          margin-left: 15px
+          stroke: #fff
+      &.button_grey
+        svg
+          display: none
+    &__total
+      &_val
+        display: block
+        width: 100%
+        text-align: right
+        margin-top: 10px
+  .cart-mobile
+    display: block
+  .modal-cart
+    &__header
+      display: none
+    &__wrapper
+      border-bottom: 1px solid #CFCFCF
+      padding-bottom: 20px
+    &__item
+      width: 50%
+      &_name
+        width: 100%
+      &_count .product__count-input
+        margin: 0
+      &_price
+        text-align: right
+        margin: 20px 0 0
+    &__total
+      border: 0
+      margin: 0 0 30px
+      &_price
+        margin-right: 0
+    &__btn
+      margin: 15px 0
+      width: 100%
 
 
 
