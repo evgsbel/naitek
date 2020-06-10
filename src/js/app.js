@@ -256,6 +256,7 @@ $('#file-del').on('click', function () {
     // document.getElementById('file-del').innerHTML = "";
     // document.getElementById('preview1').innerHTML = "";
 });
+
 function getFileParam() {
     try {
         var file = document.getElementById('uploaded-file1').files[0];
@@ -320,7 +321,33 @@ function getFileParam() {
 
 }
 
-
-
 let file = document.getElementById('uploaded-file1')
 file.onchange = getFileParam;
+
+//order scroll
+$(() => {
+    function checkWidth() {
+        let windowWidth = $('body').innerWidth()
+        if (windowWidth > 1025) {
+            $(function () {
+                var topPos = $('.js-order-scroll').offset().top;
+                $(window).scroll(function () {
+                    var top = $(document).scrollTop(),
+                        pip = $('.footer').offset().top,
+                        height = $('.js-order-scroll').outerHeight();
+                    if (top > topPos && top < pip - height) {
+                        $('.js-order-scroll').addClass('in-fix').removeAttr("style");
+                    } else if (top > pip - height) {
+                        $('.js-order-scroll').removeClass('in-fix').css({'position': 'absolute', 'bottom': '0'});
+                    } else {
+                        $('.js-order-scroll').removeClass('in-fix');
+                    }
+                });
+            });
+        }
+        checkWidth();
+        $(window).resize(function () {
+            checkWidth(); // проверит при изменении размера окна клиента
+        });
+    }
+})

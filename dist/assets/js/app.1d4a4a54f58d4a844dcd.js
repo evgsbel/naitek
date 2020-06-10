@@ -454,11 +454,10 @@ if (null !== tabs) {
 
 var input = $("#uploaded-file1");
 $('#file-del').on('click', function () {
-  input.replaceWith(input = input.val('').clone(true));
-  document.getElementById('file-name1').innerHTML = "";
-  document.getElementById('file-size1').innerHTML = "";
-  document.getElementById('file-del').innerHTML = "";
-  document.getElementById('preview1').innerHTML = "";
+  input.replaceWith(input = input.val('').clone(true)); // document.getElementById('file-name1').innerHTML = "";
+  // document.getElementById('file-size1').innerHTML = "";
+  // document.getElementById('file-del').innerHTML = "";
+  // document.getElementById('preview1').innerHTML = "";
 });
 
 function getFileParam() {
@@ -529,10 +528,43 @@ function getFileParam() {
 }
 
 var file = document.getElementById('uploaded-file1');
-file.onchange = getFileParam;
+file.onchange = getFileParam; //order scroll
+
+$(function () {
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth();
+
+    if (windowWidth > 1025) {
+      $(function () {
+        var topPos = $('.js-order-scroll').offset().top;
+        $(window).scroll(function () {
+          var top = $(document).scrollTop(),
+              pip = $('.footer').offset().top,
+              height = $('.js-order-scroll').outerHeight();
+
+          if (top > topPos && top < pip - height) {
+            $('.js-order-scroll').addClass('in-fix').removeAttr("style");
+          } else if (top > pip - height) {
+            $('.js-order-scroll').removeClass('in-fix').css({
+              'position': 'absolute',
+              'bottom': '0'
+            });
+          } else {
+            $('.js-order-scroll').removeClass('in-fix');
+          }
+        });
+      });
+    }
+
+    checkWidth();
+    $(window).resize(function () {
+      checkWidth(); // проверит при изменении размера окна клиента
+    });
+  }
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.4ca2cb87f8540e549db4.js.map
+//# sourceMappingURL=app.1d4a4a54f58d4a844dcd.js.map
