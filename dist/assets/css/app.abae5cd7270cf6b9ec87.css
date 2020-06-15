@@ -7750,7 +7750,8 @@ a.text-dark:hover, a.text-dark:focus {
       height: 9px; }
 
 .file-upload input[type="file"] {
-  display: none; }
+  opacity: 0;
+  position: absolute; }
 
 .file-upload {
   color: #fff;
@@ -9330,6 +9331,9 @@ a {
     background-color: transparent; }
     .order__file_delete:hover {
       text-decoration: none; }
+    .order__file_delete:active, .order__file_delete:focus {
+      outline: none;
+      border: 0; }
 
 .order__confidencial {
   margin: 70px 0;
@@ -9753,4 +9757,4 @@ a {
     width: 100%; } }
 
 
-/*# sourceMappingURL=app.3fa8c5f93c74f81f46e2.css.map*/
+/*# sourceMappingURL=app.abae5cd7270cf6b9ec87.css.map*/
