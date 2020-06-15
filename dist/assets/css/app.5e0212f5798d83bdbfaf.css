@@ -9582,9 +9582,14 @@ a {
     right: 30px; } }
 
 @media (max-width: 767.98px) {
-  .title, .feedback__title {
+  .title, .feedback__title, .page-news__pagetitle {
     font-size: 25px;
+    width: 100%;
     background-size: auto; }
+  .cart__subtitle, .no-found_title {
+    font-size: 20px; }
+  .main-text p {
+    font-size: 16px; }
   .contacts__subtitle {
     max-width: 100%; }
   .catalog__info {
@@ -9757,4 +9762,4 @@ a {
     width: 100%; } }
 
 
-/*# sourceMappingURL=app.abae5cd7270cf6b9ec87.css.map*/
+/*# sourceMappingURL=app.5e0212f5798d83bdbfaf.css.map*/
